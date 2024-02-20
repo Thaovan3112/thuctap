@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin tức</title>
+    <link rel="stylesheet" href="../css/tintuc.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav id="main-menu" class="navbar navbar-expand-xl navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand mr-auto logo-header" href="https://fitfood.vn">
+            <img src="../img/logo-fitfood.png" alt="" border="0">
+        </a>
+        <ul class="nav navbar-nav mr-auto ml-xl-auto order-2 order-xl-0">
+            <li class="nav-item">
+                <a class=" nav-link" href="../html/index.html">
+                    Trang chủ
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="https://fitfood.vn/menu">
+                    Thực đơn
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="https://fitfood.vn/consult">
+                    Tư Vấn
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="https://fitfood.vn/order">
+                    Đặt hàng
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="active nav-link" href="https://fitfood.vn/tin-tuc">
+                    Tin tức
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="https://fitfood.vn/faqs">
+                    FAQs
+                </a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-sub flex-row order-1 order-xl-0">
+            <!-- Chưa đăng nhập  -->
+            <li class="nav-item"><a id="btn-register" href="javascript:void(0)" class="nav-link" data-dismiss="modal"
+                    data-toggle="modal" data-target="#sign-up">Đăng ký</a></li>
+            <li class="nav-item"><a id="btn-login" href="javascript:void(0)" class="nav-link" data-dismiss="modal"
+                    data-require="" data-toggle="modal" data-target="#sign-in">Đăng nhập</a></li>
+        </ul>
+        <div id="cart-list" class="shopping-cart order-2 order-xl-0 has-banner"
+            data-url-list="https://fitfood.vn/cart/list" data-url-remove="https://fitfood.vn/cart/package/remove">
+            <a href="javascript:void(0)" id="cart" data-total="0">
+                <span class="badge hide">0</span>
+            </a>
+
+        </div>
+        </div>
+        </div>
+        <div class="overlay"></div>
+        </div>
+
+        <div class="language desktop-visible order-3 order-sm-0">
+            <span class="lang-switch " data-lang="en">
+                <span class="d-none d-sm-block">EN</span>
+            </span>
+            <span class="arrow">/</span>
+            <span class="lang-switch  active" data-lang="vi">
+                <span class="d-none d-sm-block">VI</span>
+            </span>
+        </div>
+        <!-- <input type="hidden" id="route-lang" value="https://fitfood.vn/lang"> -->
+    </nav>
+    <!-- main -->
+    <main class="">
+        <section class="top-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="title pb-4 mb-5 ">Tin tức</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-9">
+                        <div class="list-news">
+                            <div class="article mb-4">
+                                <div class="row">
+                                    <div class="col-md-3 col-xl-2 mb-2">
+                                        <a href="https://fitfood.vn/tin-tuc/ca-cao-giam-can-co-that-su-hieu-qua-su-that-va-cach-dung-dung"
+                                            class="thumb">
+                                            <img src="../img/ca-cao-giam-can-16871661758458.png" class="img-fluid"
+                                                alt="Ca cao giảm cân có thật sự hiệu quả? Sự thật và cách dùng đúng">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-9 col-xl-10">
+                                        <div class="d-flex flex-column flex-lg-row justify-content-between">
+                                            <h3 class="title"><a
+                                                    href="https://fitfood.vn/tin-tuc/ca-cao-giam-can-co-that-su-hieu-qua-su-that-va-cach-dung-dung">Ca
+                                                    cao giảm cân có thật sự hiệu quả? Sự thật và cách dùng đúng</a></h3>
+                                            <p class="meta">21/06/2023</p>
+                                        </div>
+                                        <p class="excerpt mb-0">Ca cao giảm cân là phương pháp được nhiều người áp dụng
+                                            gần đây, sự thật ra sao? Hiệu quả thế nào? Hãy cùng tìm hiểu ngay trong bài
+                                            viết này.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="article mb-4">
+                                <div class="row">
+                                    <div class="col-md-3 col-xl-2 mb-2">
+                                        <a href="https://fitfood.vn/tin-tuc/cac-loai-nuoc-ep-giam-can-de-uong-phu-hop-cho-nguoi-ken-an"
+                                            class="thumb">
+                                            <img src="../img/cac-loai-nuoc-ep-giam-can-16866300675679.png"
+                                                class="img-fluid"
+                                                alt="Các loại nước ép giảm cân, dễ uống phù hợp cho người kén ăn">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-9 col-xl-10">
+                                        <div class="d-flex flex-column flex-lg-row justify-content-between">
+                                            <h3 class="title"><a
+                                                    href="https://fitfood.vn/tin-tuc/cac-loai-nuoc-ep-giam-can-de-uong-phu-hop-cho-nguoi-ken-an">Các
+                                                    loại nước ép giảm cân, dễ uống phù hợp cho người kén ăn</a></h3>
+                                            <p class="meta">19/06/2023</p>
+                                        </div>
+                                        <p class="excerpt mb-0">Bạn đang tìm các loại nước ép giảm cân dễ uống, dễ thực
+                                            hiện, hãy cùng Fitfood tìm hiểu qua bài viết dưới đây nhé.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="article mb-4">
+                                <div class="row">
+                                    <div class="col-md-3 col-xl-2 mb-2">
+                                        <a href="https://fitfood.vn/tin-tuc/6-buoc-lam-nuoc-ep-can-tay-giam-can-hieu-qua"
+                                            class="thumb">
+                                            <img src="../img/can-tay-giam-can-16850009634794.png"
+                                                class="img-fluid" alt="6 bước làm nước ép cần tây giảm cân hiệu quả">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-9 col-xl-10">
+                                        <div class="d-flex flex-column flex-lg-row justify-content-between">
+                                            <h3 class="title"><a
+                                                    href="https://fitfood.vn/tin-tuc/6-buoc-lam-nuoc-ep-can-tay-giam-can-hieu-qua">6
+                                                    bước làm nước ép cần tây giảm cân hiệu quả</a></h3>
+                                            <p class="meta">18/06/2023</p>
+                                        </div>
+                                        <p class="excerpt mb-0">Nước ép cần tây giảm cân có thực sự mang lại kết quả
+                                            mong muốn? Công thức nước ép cần tây nào ngon, dễ uống? Bạn đọc quan tâm có
+                                            thể cùng Fitfood tìm hiểu qua bài viết dưới đây nhé!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="article mb-4">
+                                <div class="row">
+                                    <div class="col-md-3 col-xl-2 mb-2">
+                                        <a href="https://fitfood.vn/tin-tuc/chay-bo-co-giam-can-khong-cach-chay-bo-mang-lai-hieu-qua"
+                                            class="thumb">
+                                            <img src="../img/chay-bo-giam-can-16853425992637 (1).png"
+                                                class="img-fluid"
+                                                alt="Chạy bộ có giảm cân không ? Cách chạy bộ mang lại hiệu quả">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-9 col-xl-10">
+                                        <div class="d-flex flex-column flex-lg-row justify-content-between">
+                                            <h3 class="title"><a
+                                                    href="https://fitfood.vn/tin-tuc/chay-bo-co-giam-can-khong-cach-chay-bo-mang-lai-hieu-qua">Chạy
+                                                    bộ có giảm cân không ? Cách chạy bộ mang lại hiệu quả</a></h3>
+                                            <p class="meta">18/06/2023</p>
+                                        </div>
+                                        <p class="excerpt mb-0">Cách chạy bộ giảm cân như thế nào để đạt hiệu quả cao?
+                                            Hãy cùng Fitfood tìm hiểu về chạy bộ giảm cân qua bài viết dưới đây.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="article mb-4">
+                                <div class="row">
+                                    <div class="col-md-3 col-xl-2 mb-2">
+                                        <a href="https://fitfood.vn/tin-tuc/7-cach-giam-can-trong-1-tuan-bang-cach-su-dung-hat-chia"
+                                            class="thumb">
+                                            <img src="../img/hat-chia-giam-can-16850715368544.png"
+                                                class="img-fluid"
+                                                alt="7 cách giảm cân trong 1 tuần bằng cách sử dụng hạt chia">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-9 col-xl-10">
+                                        <div class="d-flex flex-column flex-lg-row justify-content-between">
+                                            <h3 class="title"><a
+                                                    href="https://fitfood.vn/tin-tuc/7-cach-giam-can-trong-1-tuan-bang-cach-su-dung-hat-chia">7
+                                                    cách giảm cân trong 1 tuần bằng cách sử dụng hạt chia</a></h3>
+                                            <p class="meta">17/06/2023</p>
+                                        </div>
+                                        <p class="excerpt mb-0">Việc sử dụng hạt chia giảm cân có mang lại kết quả như
+                                            mong đợi? Bạn đọc băn khoăn về hiệu quả giảm cân của hạt chia hãy cùng
+                                            Fitfood tìm hiểu qua bài viết dưới đây nhé.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="article mb-4">
+                                <div class="row">
+                                    <div class="col-md-3 col-xl-2 mb-2">
+                                        <a href="https://fitfood.vn/tin-tuc/cach-uong-nuoc-chanh-giam-can-tu-2-3kg-chi-trong-1-tuan"
+                                            class="thumb">
+                                            <img src="../img/cach-uong-nuoc-chanh-giam-can-16865638414677.png"
+                                                class="img-fluid"
+                                                alt="Cách uống nước chanh giảm cân từ 2 - 3kg chỉ trong 1 tuần">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-9 col-xl-10">
+                                        <div class="d-flex flex-column flex-lg-row justify-content-between">
+                                            <h3 class="title"><a
+                                                    href="https://fitfood.vn/tin-tuc/cach-uong-nuoc-chanh-giam-can-tu-2-3kg-chi-trong-1-tuan">Cách
+                                                    uống nước chanh giảm cân từ 2 - 3kg chỉ trong 1 tuần</a></h3>
+                                            <p class="meta">16/06/2023</p>
+                                        </div>
+                                        <p class="excerpt mb-0">Uống nước chanh giảm cân là một trong những phương pháp
+                                            hiệu quả, được nhiều chị em áp dụng. Hãy cùng Fitfood tìm hiểu rõ hơn trong
+                                            bài viết này nhé!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="article mb-4">
+                                <div class="row">
+                                    <div class="col-md-3 col-xl-2 mb-2">
+                                        <a href="https://fitfood.vn/tin-tuc/sua-giam-can-la-gi-co-nen-su-dung-sua-giam-can-an-toan"
+                                            class="thumb">
+                                            <img src="../img/sua-giam-can-16859593115614.png"
+                                                class="img-fluid"
+                                                alt="Sữa giảm cân là gì ? Có nên sử dụng sữa giảm cân an toàn">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-9 col-xl-10">
+                                        <div class="d-flex flex-column flex-lg-row justify-content-between">
+                                            <h3 class="title"><a
+                                                    href="https://fitfood.vn/tin-tuc/sua-giam-can-la-gi-co-nen-su-dung-sua-giam-can-an-toan">Sữa
+                                                    giảm cân là gì ? Có nên sử dụng sữa giảm cân an toàn</a></h3>
+                                            <p class="meta">15/06/2023</p>
+                                        </div>
+                                        <p class="excerpt mb-0">Nên chọn mua sữa giảm cân loại nào và cách dùng ra sao
+                                            để đạt hiệu quả tốt nhất? Bài viết dưới đây của Fitfood sẽ giúp bạn đọc hiểu
+                                            rõ về sữa giảm cân và cách chọn phù hợp để sử dụng an toàn.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="article mb-4">
+                                <div class="row">
+                                    <div class="col-md-3 col-xl-2 mb-2">
+                                        <a href="https://fitfood.vn/tin-tuc/detox-giam-can-la-gi-12-cach-che-bien-nuoc-detox-hieu-qua"
+                                            class="thumb">
+                                            <img src="../img/detox-giam-can-16862960825394.png"
+                                                class="img-fluid"
+                                                alt="Detox giảm cân là gì? 12 cách chế biến nước detox hiệu quả">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-9 col-xl-10">
+                                        <div class="d-flex flex-column flex-lg-row justify-content-between">
+                                            <h3 class="title"><a
+                                                    href="https://fitfood.vn/tin-tuc/detox-giam-can-la-gi-12-cach-che-bien-nuoc-detox-hieu-qua">Detox
+                                                    giảm cân là gì? 12 cách chế biến nước detox hiệu quả</a></h3>
+                                            <p class="meta">14/06/2023</p>
+                                        </div>
+                                        <p class="excerpt mb-0">Detox là một phương pháp giảm cân được nhiều người áp
+                                            dụng. Hãy cùng Fitfood tìm hiểu về phương pháp detox giảm cân và 12 cách chế
+                                            biến nước detox hiệu quả.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="article mb-4">
+                                <div class="row">
+                                    <div class="col-md-3 col-xl-2 mb-2">
+                                        <a href="https://fitfood.vn/tin-tuc/chuong-trinh-uu-dai-thang-6" class="thumb">
+                                            <img src="../img/banner-web-16872378724382.jpg"
+                                                class="img-fluid" alt="CHƯƠNG TRÌNH ƯU ĐÃI THÁNG 6">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-9 col-xl-10">
+                                        <div class="d-flex flex-column flex-lg-row justify-content-between">
+                                            <h3 class="title"><a
+                                                    href="https://fitfood.vn/tin-tuc/chuong-trinh-uu-dai-thang-6">CHƯƠNG
+                                                    TRÌNH ƯU ĐÃI THÁNG 6</a></h3>
+                                            <p class="meta">13/06/2023</p>
+                                        </div>
+                                        <p class="excerpt mb-0">ĐÓN HÈ TỰ TIN VỚI VÔ VÀN CHƯƠNG TRÌNH ƯU ĐÃI TỪ FITFOOD
+                                            VN</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="article mb-4">
+                                <div class="row">
+                                    <div class="col-md-3 col-xl-2 mb-2">
+                                        <a href="https://fitfood.vn/tin-tuc/an-khoai-lang-co-giam-can-khong-nhung-dieu-can-biet-khi-an-khoai-lang"
+                                            class="thumb">
+                                            <img src="../img/an-khoai-lang-co-giam-can-khong-16861259297936.png"
+                                                class="img-fluid"
+                                                alt="Ăn khoai lang có giảm cân không ? Những điều cần biết khi ăn khoai lang">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-9 col-xl-10">
+                                        <div class="d-flex flex-column flex-lg-row justify-content-between">
+                                            <h3 class="title"><a
+                                                    href="https://fitfood.vn/tin-tuc/an-khoai-lang-co-giam-can-khong-nhung-dieu-can-biet-khi-an-khoai-lang">Ăn
+                                                    khoai lang có giảm cân không ? Những điều cần biết khi ăn khoai
+                                                    lang</a></h3>
+                                            <p class="meta">13/06/2023</p>
+                                        </div>
+                                        <p class="excerpt mb-0">Ăn khoai lang có giúp giảm cân hay không? Cách ăn khoai
+                                            lang giảm cân như thế nào hiệu quả lâu dài và bảo vệ sức khỏe? Bạn đọc quan
+                                            tâm hãy cùng Fitfood tìm hiểu về chế độ ăn khoai lang giảm cân qua bài viết
+                                            dưới đây nhé!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="article mb-4">
+                                <div class="row">
+                                    <div class="col-md-3 col-xl-2 mb-2">
+                                        <a href="https://fitfood.vn/tin-tuc/thuc-don-giam-can-voi-gao-lut-khong-phai-ai-cung-biet"
+                                            class="thumb">
+                                            <img src="../img/gao-lut-giam-can-16847482768644.png"
+                                                class="img-fluid"
+                                                alt="Thực đơn giảm cân với gạo lứt không phải ai cũng biết">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-9 col-xl-10">
+                                        <div class="d-flex flex-column flex-lg-row justify-content-between">
+                                            <h3 class="title"><a
+                                                    href="https://fitfood.vn/tin-tuc/thuc-don-giam-can-voi-gao-lut-khong-phai-ai-cung-biet">Thực
+                                                    đơn giảm cân với gạo lứt không phải ai cũng biết</a></h3>
+                                            <p class="meta">13/06/2023</p>
+                                        </div>
+                                        <p class="excerpt mb-0">Gạo lứt được nhiều người sử dụng trong chế độ ăn, lên
+                                            thực đơn với gạo lứt giảm cân như thế nào hiệu quả? Hãy cùng Fitfood tìm
+                                            hiểu qua bài viết dưới đây về cách ăn gạo lứt giảm cân an toàn.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="article mb-4">
+                                <div class="row">
+                                    <div class="col-md-3 col-xl-2 mb-2">
+                                        <a href="https://fitfood.vn/tin-tuc/cach-dung-giam-tao-hang-ngay-de-giam-can-an-toan"
+                                            class="thumb">
+                                            <img src="../img/giam-tao-giam-can-16847311739402.png"
+                                                class="img-fluid"
+                                                alt="Cách dùng giấm táo hằng ngày để giảm cân an toàn">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-9 col-xl-10">
+                                        <div class="d-flex flex-column flex-lg-row justify-content-between">
+                                            <h3 class="title"><a
+                                                    href="https://fitfood.vn/tin-tuc/cach-dung-giam-tao-hang-ngay-de-giam-can-an-toan">Cách
+                                                    dùng giấm táo hằng ngày để giảm cân an toàn</a></h3>
+                                            <p class="meta">13/06/2023</p>
+                                        </div>
+                                        <p class="excerpt mb-0">Giấm táo là một nguyên liệu phổ biến trong các chế độ
+                                            giảm cân. Làm thế nào để dùng giấm táo vừa hiệu quả, vừa an toàn. Hãy cùng
+                                            Fitfood tìm hiểu về cách dùng giấm táo giảm cân trong chế độ ăn hàng ngày
+                                            nhé!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="article mb-4">
+                                <div class="row">
+                                    <div class="col-md-3 col-xl-2 mb-2">
+                                        <a href="https://fitfood.vn/tin-tuc/uong-gi-de-giam-can-cac-thuc-uong-giam-can-hieu-qua-trong-1-tuan"
+                                            class="thumb">
+                                            <img src="../img/uong-gi-de-giam-can-168621650503.png"
+                                                class="img-fluid"
+                                                alt="Uống gì để giảm cân? Các thức uống giảm cân hiệu quả trong 1 tuần">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-9 col-xl-10">
+                                        <div class="d-flex flex-column flex-lg-row justify-content-between">
+                                            <h3 class="title"><a
+                                                    href="https://fitfood.vn/tin-tuc/uong-gi-de-giam-can-cac-thuc-uong-giam-can-hieu-qua-trong-1-tuan">Uống
+                                                    gì để giảm cân? Các thức uống giảm cân hiệu quả trong 1 tuần</a>
+                                            </h3>
+                                            <p class="meta">12/06/2023</p>
+                                        </div>
+                                        <p class="excerpt mb-0">Đồ uống cũng là một trong những yếu tố quan trọng giúp
+                                            việc giảm cân thành công. Vậy, nên uống gì để giảm cân? Thức uống nào giúp
+                                            kiểm soát cân nặng hiệu quả trong 1 tuần? Hãy cùng Fitfood tìm hiểu ngay
+                                            trong bài viết này.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="article mb-4">
+                                <div class="row">
+                                    <div class="col-md-3 col-xl-2 mb-2">
+                                        <a href="https://fitfood.vn/tin-tuc/12-cach-giam-can-don-gian-de-lam-tai-nha-ma-hieu-qua"
+                                            class="thumb">
+                                            <img src="../img/top-12-cach-giam-can-hieu-qua-16853531657471.png"
+                                                class="img-fluid"
+                                                alt="12 cách giảm cân đơn giản dễ làm tại nhà mà hiệu quả">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-9 col-xl-10">
+                                        <div class="d-flex flex-column flex-lg-row justify-content-between">
+                                            <h3 class="title"><a
+                                                    href="https://fitfood.vn/tin-tuc/12-cach-giam-can-don-gian-de-lam-tai-nha-ma-hieu-qua">12
+                                                    cách giảm cân đơn giản dễ làm tại nhà mà hiệu quả</a></h3>
+                                            <p class="meta">12/06/2023</p>
+                                        </div>
+                                        <p class="excerpt mb-0">Giảm cân đơn giản tại nhà bằng các điều chỉnh chế độ ăn
+                                            hàng ngày bằng thực phẩm bạn sử dụng, sẽ mang lại hiệu quả giảm cân tốt
+                                            nhất, cùng tìm hiểu qua 12 cách giảm cân này nhé</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="article mb-4">
+                                <div class="row">
+                                    <div class="col-md-3 col-xl-2 mb-2">
+                                        <a href="https://fitfood.vn/tin-tuc/cach-an-yen-mach-giam-can-khong-phai-ai-cung-biet"
+                                            class="thumb">
+                                            <img src="../img/yen-mach-giam-can-16843069846995.png"
+                                                class="img-fluid"
+                                                alt="Cách ăn yến mạch giảm cân không phải ai cũng biết ?">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-9 col-xl-10">
+                                        <div class="d-flex flex-column flex-lg-row justify-content-between">
+                                            <h3 class="title"><a
+                                                    href="https://fitfood.vn/tin-tuc/cach-an-yen-mach-giam-can-khong-phai-ai-cung-biet">Cách
+                                                    ăn yến mạch giảm cân không phải ai cũng biết ?</a></h3>
+                                            <p class="meta">12/06/2023</p>
+                                        </div>
+                                        <p class="excerpt mb-0">Yến mạch được sử dụng phổ biến trong khẩu phần ăn giảm
+                                            cân của nhiều người. Cách chế biến yến mạch trở thành món ngon ngay tại nhà
+                                            như thế nào? Hãy cùng Fitfood tìm hiểu ngay nhé!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="pagination" role="navigation">
+
+                            <li class="page-item disabled" aria-disabled="true" aria-label="« Previous">
+                                <span class="page-link" aria-hidden="true">‹</span>
+                            </li>
+
+
+
+
+
+                            <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
+                            <li class="page-item"><a class="page-link" href="https://fitfood.vn/tin-tuc?page=2">2</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="https://fitfood.vn/tin-tuc?page=3">3</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="https://fitfood.vn/tin-tuc?page=4">4</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="https://fitfood.vn/tin-tuc?page=5">5</a>
+                            </li>
+
+
+                            <li class="page-item">
+                                <a class="page-link" href="https://fitfood.vn/tin-tuc?page=2" rel="next"
+                                    aria-label="Next »">›</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3">
+                        <div id="menu-cate" class="sticky">
+                            <div>
+                                <div class="row">
+                                    <div class="col-12 form-group">
+                                        <form action="https://fitfood.vn/search" class="form-search">
+                                            <div class="search-control s-news">
+                                                <input type="text" class="form-control s-search" name="s"
+                                                    placeholder="Tìm kiếm" value="">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-categories">
+                                <ul>
+                                    <li><a href="https://fitfood.vn/tin-tuc/su-kien">Sự Kiện</a></li>
+                                    <li><a href="https://fitfood.vn/tin-tuc/thong-bao">Thông Báo</a></li>
+                                    <li><a href="https://fitfood.vn/tin-tuc/che-do-an">Chế Độ Ăn</a></li>
+                                    <li><a href="https://fitfood.vn/tin-tuc/gym-fitness">Gym &amp; Fitness</a></li>
+                                    <li><a href="https://fitfood.vn/tin-tuc/giam-can-hieu-qua">Giảm Cân Hiệu Quả</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- footer -->
+    <footer class="footer-main">
+        <div class="container">
+            <a href="/" class="mb-4 d-block">
+                <img src="../img/logo-fitfood.png" alt="fitfoodvn" border="0">
+            </a>
+            <div class="widget-footer mb-4">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <h4>Công ty TNHH Fitfood</h4>
+                        <p>
+                            <strong>Địa chỉ</strong> 33 Đường 14, KDC Bình Hưng, Ấp 2, Huyện Bình Chánh, TPHCM<br>
+                            <strong>Điện thoại</strong> (+84) 932 788 120 [hotline]<br>
+                            <strong>Email</strong> info@fitfood.vn. For business inquiries: business@fitfood.vn<br>
+                            <strong>MST</strong> 0313272749 do Sở kế hoạch và đầu tư TPHCM cấp ngày 26/05/2015
+                        </p>
+                        <div class="row">
+                            <div class="col-12 form-group">
+                                <form action="https://fitfood.vn/search" class="form-search">
+                                    <div class="search-control s-home">
+                                        <input type="text" class="form-control s-search" name="s" placeholder="Tìm kiếm"
+                                            value="">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <h4>Điều khoản chung</h4>
+                        <ul>
+                            <li><a href="https://fitfood.vn/page/chinh-sach-quy-dinh-chung">Chính Sách Quy Định
+                                    Chung</a></li>
+                            <li><a href="https://fitfood.vn/page/quy-dinh-hinh-thuc-thanh-toan">Quy Định Hình Thức Thanh
+                                    Toán</a></li>
+                            <li><a href="https://fitfood.vn/page/chinh-sach-van-chuyen-giao-hang">Chính Sách Vận Chuyển
+                                    Giao Hàng</a></li>
+                            <li><a href="https://fitfood.vn/page/chinh-sach-bao-mat-thong-tin">Chính Sách Bảo Mật Thông
+                                    Tin</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <h4>Theo dõi chúng tôi tại</h4>
+                        <div class="social mb-3">
+                            <a href="https://www.facebook.com/fitfoodvietnam" target="_blank">
+                                <img src="../img/ic-fb.png" alt="fitfoodvietnam" border="0">
+                            </a>
+                            <a href="https://www.instagram.com/fitfoodvn" target="_blank">
+                                <img src="../img/ic-instagram.png" alt="fitfoodvn" border="0">
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=CJ6eTsFdd1I" target="_blank">
+                                <img src="../img/ic-youtube.png" alt="fitfoodvn" border="0">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="http://online.gov.vn/HomePage/CustomWebsiteDisplay.aspx?DocId=34289"
+                                target="_blank">
+                                <img src="../img/logo-bocongthuong.png" alt="fitfoodvn" border="0" width="120px">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright mb-0">© Copyright 2023 Fitfood. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

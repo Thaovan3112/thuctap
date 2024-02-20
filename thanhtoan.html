@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="3KBaZOVNjtRoCIMrL7xAVJ1dvZPFZbdMspPXV30A">
+    <meta name="lang" content="vi">
+
+    <title>Thanh toán </title>
+    
+    <link rel="stylesheet" href="../css/index1.css">
+    <link rel="stylesheet" href="../css/index2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body data-page="payment" data-device="desktop" class="" data-url="https://fitfood.vn/payment" data-lang="vi">
+    
+
+    <nav id="main-menu" class="navbar navbar-expand-xl navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand mr-auto logo-header" href="https://fitfood.vn">
+            <img src="../img/logo-fitfood.png" alt="" border="0" />
+        </a>
+        <ul class="nav navbar-nav mr-auto ml-xl-auto order-2 order-xl-0">
+            <li class="nav-item">
+                <a class="active nav-link" href="https://fitfood.vn">
+                    Trang chủ
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="https://fitfood.vn/menu">
+                    Thực đơn
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="https://fitfood.vn/consult">
+                    Tư Vấn
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="https://fitfood.vn/order">
+                    Đặt hàng
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="../html/tintuc.html">
+                    Tin tức
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="https://fitfood.vn/faqs">
+                    FAQs
+                </a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-sub flex-row order-1 order-xl-0">
+            <!-- Chưa đăng nhập -->
+            <li class="nav-item"><a id="btn-register" href="javascript:void(0)" class="nav-link" data-dismiss="modal"
+                    data-toggle="modal" data-target="#sign-up">Đăng ký</a></li>
+            <li class="nav-item"><a id="btn-login" href="javascript:void(0)" class="nav-link" data-dismiss="modal"
+                    data-require="" data-toggle="modal" data-target="#sign-in">Đăng nhập</a></li>
+        </ul>
+        </div>
+
+        <div id="cart-list" class="shopping-cart order-2 order-xl-0 has-banner"
+            data-url-list="https://fitfood.vn/cart/list" data-url-remove="https://fitfood.vn/cart/package/remove">
+            <a href="javascript:void(0)" id="cart" data-total="0">
+                <span class="badge hide">0</span>
+            </a>
+            <div class="list-order-cart">
+                <a href="javascript:void(0)" class="close"><i class="fa fa-times" aria-hidden="true"></i></a>
+                <div class="title mb-4">Giỏ hàng</div>
+                <div id="cart-list-content">
+                </div>
+            </div>
+            <div class="overlay"></div>
+        </div>
+
+        <div class="language desktop-visible order-3 order-sm-0">
+            <span class="lang-switch " data-lang="en">
+                <span class="d-none d-sm-block">EN</span>
+            </span>
+            <span class="arrow">/</span>
+            <span class="lang-switch  active" data-lang="vi">
+                <span class="d-none d-sm-block">VI</span>
+            </span>
+        </div>
+    </nav>
+    </nav>
+
+    <main class="template_edit_package">
+        <section class="top-inner">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item completed">
+                            <a href="javascript:void(0);">
+                                <span><i class="fa fa-order" aria-hidden="true"></i></span>Đặt hàng
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item completed">
+                            <a href="javascript:void(0);">
+                                <span><i class="fa fa-ellipsis-h" aria-hidden="true"></i></span>Chỉnh sửa
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item active">
+                            <a href="javascript:void(0);">
+                                <span><i class="fa fa-usd" aria-hidden="true"></i></span>Thanh toán
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item ">
+                            <a href="javascript:void(0);">
+                                <span><i class="fa fa-check" aria-hidden="true"></i></span>Xác nhận
+                            </a>
+                        </li>
+                    </ol>
+                </nav>
+                <h3 class="title">Thanh toán</h3>
+
+
+                <div class="box-info">
+                    <div class="d-md-flex align-items-center justify-content-between mb-3">
+                        <p class="title mb-2 mb-md-0">Địa chỉ giao hàng</p>
+                        <a href="javascript:void(0)" class="btn btn-outline-secondary" data-toggle="modal"
+                            data-target="#addressModal">
+                            <i class="fa fa-plus mr-2" aria-hidden="true"></i>Thêm địa chỉ mới
+                        </a>
+                    </div>
+                    <p>Bạn vui lòng nhập địa chỉ để chúng tôi giao hàng cho bạn.</p>
+                </div>
+                <!-- modal new address -->
+                <div class="modal fade" id="addressModal" tabindex="-1" role="dialog"
+                    aria-labelledby="addressModalLabel" data-backdrop="static" aria-hidden="true">
+                    <div class="modal-dialog customer-address modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <form id="customer-address-form" action="https://fitfood.vn/address">
+                                            <h2>Thêm địa chỉ mới</h2>
+                                            <div class="form-group">
+                                                <label for=""><strong>Họ &amp; Tên</strong></label>
+                                                <input type="text" id="cus_name" name="name" class="form-control"
+                                                    maxlength="90" placeholder="" data-validation="Họ &amp; Tên">
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6 form-group">
+                                                    <label for=""><strong>SĐT</strong></label>
+                                                    <input type="text" id="cus_phone" name="phone" class="form-control"
+                                                        maxlength="10" placeholder="" data-validation="Nhập SĐT">
+                                                </div>
+                                                <div class="col-6">
+                                                    <label for=""><strong>Giới tính</strong></label>
+                                                    <div class="form-group">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="gender"
+                                                                id="inlineRadio1" value="M" checked>
+                                                            <label class="form-check-label"
+                                                                for="inlineRadio1">Nam</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="gender"
+                                                                id="inlineRadio2" value="F">
+                                                            <label class="form-check-label"
+                                                                for="inlineRadio2">Nữ</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for=""><strong>Quận</strong></label>
+                                                        <div>
+                                                            <select class="form-control iselect2" id="cus_district"
+                                                                name="district_id" data-validation="Nhập quận"
+                                                                data-placeholder="Chọn quận">
+                                                                <option></option>
+                                                                <option value="1">Huyện Bình Chánh</option>
+                                                                <option value="26">Huyện Nhà Bè</option>
+                                                                <option value="6">Quận 01</option>
+                                                                <option value="7">Quận 02</option>
+                                                                <option value="31">Quận 02 (Thạnh Mỹ Lợi)</option>
+                                                                <option value="8">Quận 03</option>
+                                                                <option value="9">Quận 04</option>
+                                                                <option value="10">Quận 05</option>
+                                                                <option value="11">Quận 06</option>
+                                                                <option value="12">Quận 07</option>
+                                                                <option value="13">Quận 08 (Phường 1-&gt;14)</option>
+                                                                <option value="33">Quận 08 (Phường 15,16)</option>
+                                                                <option value="30">Quận 09</option>
+                                                                <option value="15">Quận 10</option>
+                                                                <option value="16">Quận 11</option>
+                                                                <option value="18">Quận Bình Tân</option>
+                                                                <option value="19">Quận Bình Thạnh</option>
+                                                                <option value="20">Quận Gò Vấp</option>
+                                                                <option value="21">Quận Phú Nhuận</option>
+                                                                <option value="22">Quận Tân Bình</option>
+                                                                <option value="23">Quận Tân Phú</option>
+                                                                <option value="29">Quận Thủ Đức</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for=""><strong>Phường</strong></label>
+                                                        <div>
+                                                            <select class="form-control iselect2" id="cus_ward"
+                                                                name="ward_id" data-validation="Nhập phường"
+                                                                data-placeholder="Chọn phường">
+                                                                <option value=""></option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for=""><strong>Số nhà &amp; tên đường</strong></label>
+                                                <input type="text" id="cus_street" name="street" maxlength="400"
+                                                    class="form-control" placeholder=""
+                                                    data-validation="Số nhà &amp; tên đường">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" name="default"
+                                                        id="is_default">
+                                                    <label class="form-check-label" for="is_default">Làm địa chỉ mặc
+                                                        định</label>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-center">
+                                                <button type="submit" class="btn btn-primary">Hoàn thành</button>
+                                                <button type="button" class="btn btn-outline-danger"
+                                                    data-dismiss="modal">Trở về</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!--
+                    <div class="col-7">
+
+                    </div>
+                    -->
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: none">
+                    <textarea
+                        id="data_ward">{"1":[{"id":4,"text":"X\u00e3 B\u00ecnh H\u01b0ng"}],"2":[{"id":17,"text":"Th\u1ecb tr\u1ea5n C\u1ea7n Th\u1ea1nh"},{"id":18,"text":"X\u00e3 An Th\u1edbi \u0110\u00f4ng"},{"id":19,"text":"X\u00e3 B\u00ecnh Kh\u00e1nh"},{"id":20,"text":"X\u00e3 Long H\u00f2a"},{"id":21,"text":"X\u00e3 L\u00fd Nh\u01a1n"},{"id":22,"text":"X\u00e3 Tam Th\u00f4n Hi\u1ec7p"},{"id":23,"text":"X\u00e3 Th\u1ea1nh An"}],"3":[{"id":24,"text":"Th\u1ecb tr\u1ea5n C\u1ee7 Chi"},{"id":25,"text":"X\u00e3 An Nh\u01a1n T\u00e2y"},{"id":26,"text":"X\u00e3 An Ph\u00fa"},{"id":27,"text":"X\u00e3 B\u00ecnh M\u1ef9"},{"id":28,"text":"X\u00e3 H\u00f2a Ph\u00fa"},{"id":29,"text":"X\u00e3 Nhu\u1eadn \u0110\u1ee9c"},{"id":30,"text":"X\u00e3 Ph\u1ea1m V\u0103n C\u1ed9i"},{"id":31,"text":"X\u00e3 Ph\u00fa H\u00f2a \u0110\u00f4ng"},{"id":32,"text":"X\u00e3 Ph\u00fa M\u1ef9 H\u01b0ng"},{"id":33,"text":"X\u00e3 Ph\u01b0\u1edbc Hi\u1ec7p"},{"id":34,"text":"X\u00e3 Ph\u01b0\u1edbc Th\u1ea1nh"},{"id":35,"text":"X\u00e3 Ph\u01b0\u1edbc V\u0129nh An"},{"id":36,"text":"X\u00e3 T\u00e2n An H\u1ed9i"},{"id":37,"text":"X\u00e3 T\u00e2n Ph\u00fa Trung"},{"id":39,"text":"X\u00e3 T\u00e2n Th\u1ea1nh \u0110\u00f4ng"},{"id":38,"text":"X\u00e3 T\u00e2n Th\u1ea1nh T\u00e2y"},{"id":40,"text":"X\u00e3 T\u00e2n Th\u00f4ng H\u1ed9i"},{"id":41,"text":"X\u00e3 Th\u00e1i M\u1ef9"},{"id":42,"text":"X\u00e3 Trung An"},{"id":43,"text":"X\u00e3 Trung L\u1eadp H\u1ea1"},{"id":44,"text":"X\u00e3 Trung L\u1eadp Th\u01b0\u1ee3ng"}],"4":[{"id":45,"text":"Th\u1ecb tr\u1ea5n H\u00f3c M\u00f4n"},{"id":46,"text":"X\u00e3 B\u00e0 \u0110i\u1ec3m"},{"id":56,"text":"X\u00e3 \u0110\u00f4ng Th\u1ea1nh"},{"id":47,"text":"X\u00e3 Nh\u1ecb B\u00ecnh"},{"id":48,"text":"X\u00e3 T\u00e2n Hi\u1ec7p"},{"id":49,"text":"X\u00e3 T\u00e2n Th\u1edbi Nh\u00ec"},{"id":50,"text":"X\u00e3 T\u00e2n Xu\u00e2n"},{"id":51,"text":"X\u00e3 Th\u1edbi Tam Th\u00f4n"},{"id":52,"text":"X\u00e3 Trung Ch\u00e1nh"},{"id":55,"text":"X\u00e3 Xu\u00e2n Th\u1edbi \u0110\u00f4ng"},{"id":53,"text":"X\u00e3 Xu\u00e2n Th\u1edbi S\u01a1n"},{"id":54,"text":"X\u00e3 Xu\u00e2n Th\u1edbi Th\u01b0\u1ee3ng"}],"5":[{"id":57,"text":"Th\u1ecb tr\u1ea5n Nh\u00e0 B\u00e8"},{"id":58,"text":"X\u00e3 Hi\u1ec7p Ph\u01b0\u1edbc"},{"id":59,"text":"X\u00e3 Long Th\u1edbi"},{"id":60,"text":"X\u00e3 Nh\u01a1n \u0110\u1ee9c"},{"id":61,"text":"X\u00e3 Ph\u00fa Xu\u00e2n"},{"id":62,"text":"X\u00e3 Ph\u01b0\u1edbc Ki\u1ec3n"},{"id":63,"text":"X\u00e3 Ph\u01b0\u1edbc L\u1ed9c"}],"6":[{"id":64,"text":"Ph\u01b0\u1eddng B\u1ebfn Ngh\u00e9"},{"id":65,"text":"Ph\u01b0\u1eddng B\u1ebfn Th\u00e0nh"},{"id":66,"text":"Ph\u01b0\u1eddng C\u1ea7u Kho"},{"id":67,"text":"Ph\u01b0\u1eddng C\u1ea7u \u00d4ng L\u00e3nh"},{"id":68,"text":"Ph\u01b0\u1eddng C\u00f4 Giang"},{"id":73,"text":"Ph\u01b0\u1eddng \u0110a Kao"},{"id":69,"text":"Ph\u01b0\u1eddng Nguy\u1ec5n C\u01b0 Trinh"},{"id":70,"text":"Ph\u01b0\u1eddng Nguy\u1ec5n Th\u00e1i B\u00ecnh"},{"id":71,"text":"Ph\u01b0\u1eddng Ph\u1ea1m Ng\u0169 L\u00e3o"},{"id":72,"text":"Ph\u01b0\u1eddng T\u00e2n \u0110\u1ecbnh"}],"7":[{"id":74,"text":"Ph\u01b0\u1eddng An Kh\u00e1nh"},{"id":75,"text":"Ph\u01b0\u1eddng An L\u1ee3i \u0110\u00f4ng"},{"id":76,"text":"Ph\u01b0\u1eddng An Ph\u00fa"},{"id":77,"text":"Ph\u01b0\u1eddng B\u00ecnh An"},{"id":341,"text":"Ph\u01b0\u1eddng B\u00ecnh Kh\u00e1nh"},{"id":80,"text":"Ph\u01b0\u1eddng B\u00ecnh Tr\u01b0ng \u0110\u00f4ng"},{"id":79,"text":"Ph\u01b0\u1eddng B\u00ecnh Tr\u01b0ng T\u00e2y"},{"id":83,"text":"Ph\u01b0\u1eddng Th\u1ea3o \u0110i\u1ec1n"},{"id":84,"text":"Ph\u01b0\u1eddng Th\u1ee7 Thi\u00eam"}],"8":[{"id":85,"text":"Ph\u01b0\u1eddng 01"},{"id":86,"text":"Ph\u01b0\u1eddng 02"},{"id":87,"text":"Ph\u01b0\u1eddng 03"},{"id":88,"text":"Ph\u01b0\u1eddng 04"},{"id":89,"text":"Ph\u01b0\u1eddng 05"},{"id":90,"text":"Ph\u01b0\u1eddng 06"},{"id":91,"text":"Ph\u01b0\u1eddng 07"},{"id":92,"text":"Ph\u01b0\u1eddng 08"},{"id":93,"text":"Ph\u01b0\u1eddng 09"},{"id":94,"text":"Ph\u01b0\u1eddng 10"},{"id":95,"text":"Ph\u01b0\u1eddng 11"},{"id":96,"text":"Ph\u01b0\u1eddng 12"},{"id":97,"text":"Ph\u01b0\u1eddng 13"},{"id":98,"text":"Ph\u01b0\u1eddng 14"}],"9":[{"id":99,"text":"Ph\u01b0\u1eddng 01"},{"id":100,"text":"Ph\u01b0\u1eddng 02"},{"id":101,"text":"Ph\u01b0\u1eddng 03"},{"id":102,"text":"Ph\u01b0\u1eddng 04"},{"id":103,"text":"Ph\u01b0\u1eddng 05"},{"id":104,"text":"Ph\u01b0\u1eddng 06"},{"id":105,"text":"Ph\u01b0\u1eddng 08"},{"id":106,"text":"Ph\u01b0\u1eddng 09"},{"id":107,"text":"Ph\u01b0\u1eddng 10"},{"id":108,"text":"Ph\u01b0\u1eddng 12"},{"id":109,"text":"Ph\u01b0\u1eddng 13"},{"id":110,"text":"Ph\u01b0\u1eddng 14"},{"id":111,"text":"Ph\u01b0\u1eddng 15"},{"id":112,"text":"Ph\u01b0\u1eddng 16"},{"id":113,"text":"Ph\u01b0\u1eddng 18"}],"10":[{"id":114,"text":"Ph\u01b0\u1eddng 01"},{"id":115,"text":"Ph\u01b0\u1eddng 02"},{"id":116,"text":"Ph\u01b0\u1eddng 03"},{"id":117,"text":"Ph\u01b0\u1eddng 04"},{"id":118,"text":"Ph\u01b0\u1eddng 05"},{"id":119,"text":"Ph\u01b0\u1eddng 06"},{"id":120,"text":"Ph\u01b0\u1eddng 07"},{"id":121,"text":"Ph\u01b0\u1eddng 08"},{"id":122,"text":"Ph\u01b0\u1eddng 09"},{"id":123,"text":"Ph\u01b0\u1eddng 10"},{"id":124,"text":"Ph\u01b0\u1eddng 11"},{"id":125,"text":"Ph\u01b0\u1eddng 12"},{"id":126,"text":"Ph\u01b0\u1eddng 13"},{"id":127,"text":"Ph\u01b0\u1eddng 14"},{"id":128,"text":"Ph\u01b0\u1eddng 15"}],"11":[{"id":129,"text":"Ph\u01b0\u1eddng 01"},{"id":130,"text":"Ph\u01b0\u1eddng 02"},{"id":131,"text":"Ph\u01b0\u1eddng 03"},{"id":132,"text":"Ph\u01b0\u1eddng 04"},{"id":133,"text":"Ph\u01b0\u1eddng 05"},{"id":134,"text":"Ph\u01b0\u1eddng 06"},{"id":135,"text":"Ph\u01b0\u1eddng 07"},{"id":136,"text":"Ph\u01b0\u1eddng 08"},{"id":137,"text":"Ph\u01b0\u1eddng 09"},{"id":138,"text":"Ph\u01b0\u1eddng 10"},{"id":139,"text":"Ph\u01b0\u1eddng 11"},{"id":140,"text":"Ph\u01b0\u1eddng 12"},{"id":141,"text":"Ph\u01b0\u1eddng 13"},{"id":142,"text":"Ph\u01b0\u1eddng 14"}],"12":[{"id":143,"text":"Ph\u01b0\u1eddng B\u00ecnh Thu\u1eadn"},{"id":144,"text":"Ph\u01b0\u1eddng Ph\u00fa M\u1ef9"},{"id":145,"text":"Ph\u01b0\u1eddng Ph\u00fa Thu\u1eadn"},{"id":146,"text":"Ph\u01b0\u1eddng T\u00e2n H\u01b0ng"},{"id":147,"text":"Ph\u01b0\u1eddng T\u00e2n Ki\u1ec3ng"},{"id":148,"text":"Ph\u01b0\u1eddng T\u00e2n Phong"},{"id":149,"text":"Ph\u01b0\u1eddng T\u00e2n Ph\u00fa"},{"id":150,"text":"Ph\u01b0\u1eddng T\u00e2n Quy"},{"id":152,"text":"Ph\u01b0\u1eddng T\u00e2n Thu\u1eadn \u0110\u00f4ng"},{"id":151,"text":"Ph\u01b0\u1eddng T\u00e2n Thu\u1eadn T\u00e2y"}],"13":[{"id":153,"text":"Ph\u01b0\u1eddng 01"},{"id":154,"text":"Ph\u01b0\u1eddng 02"},{"id":155,"text":"Ph\u01b0\u1eddng 03"},{"id":156,"text":"Ph\u01b0\u1eddng 04"},{"id":157,"text":"Ph\u01b0\u1eddng 05"},{"id":158,"text":"Ph\u01b0\u1eddng 06"},{"id":159,"text":"Ph\u01b0\u1eddng 07"},{"id":160,"text":"Ph\u01b0\u1eddng 08"},{"id":161,"text":"Ph\u01b0\u1eddng 09"},{"id":162,"text":"Ph\u01b0\u1eddng 10"},{"id":163,"text":"Ph\u01b0\u1eddng 11"},{"id":164,"text":"Ph\u01b0\u1eddng 12"},{"id":165,"text":"Ph\u01b0\u1eddng 13"},{"id":166,"text":"Ph\u01b0\u1eddng 14"}],"14":[{"id":169,"text":"Ph\u01b0\u1eddng Hi\u1ec7p Ph\u00fa"},{"id":170,"text":"Ph\u01b0\u1eddng Long B\u00ecnh"},{"id":171,"text":"Ph\u01b0\u1eddng Long Ph\u01b0\u1edbc"},{"id":172,"text":"Ph\u01b0\u1eddng Long Th\u1ea1nh M\u1ef9"},{"id":173,"text":"Ph\u01b0\u1eddng Long Tr\u01b0\u1eddng"},{"id":174,"text":"Ph\u01b0\u1eddng Ph\u00fa H\u1eefu"},{"id":175,"text":"Ph\u01b0\u1eddng Ph\u01b0\u1edbc B\u00ecnh"},{"id":176,"text":"Ph\u01b0\u1eddng Ph\u01b0\u1edbc Long A"},{"id":177,"text":"Ph\u01b0\u1eddng Ph\u01b0\u1edbc Long B"},{"id":178,"text":"Ph\u01b0\u1eddng T\u00e2n Ph\u00fa"},{"id":179,"text":"Ph\u01b0\u1eddng T\u0103ng Nh\u01a1n Ph\u00fa A"},{"id":180,"text":"Ph\u01b0\u1eddng T\u0103ng Nh\u01a1n Ph\u00fa B"},{"id":181,"text":"Ph\u01b0\u1eddng Tr\u01b0\u1eddng Th\u1ea1nh"}],"15":[{"id":182,"text":"Ph\u01b0\u1eddng 01"},{"id":183,"text":"Ph\u01b0\u1eddng 02"},{"id":184,"text":"Ph\u01b0\u1eddng 03"},{"id":185,"text":"Ph\u01b0\u1eddng 04"},{"id":186,"text":"Ph\u01b0\u1eddng 05"},{"id":187,"text":"Ph\u01b0\u1eddng 06"},{"id":188,"text":"Ph\u01b0\u1eddng 07"},{"id":189,"text":"Ph\u01b0\u1eddng 08"},{"id":190,"text":"Ph\u01b0\u1eddng 09"},{"id":191,"text":"Ph\u01b0\u1eddng 10"},{"id":192,"text":"Ph\u01b0\u1eddng 11"},{"id":193,"text":"Ph\u01b0\u1eddng 12"},{"id":194,"text":"Ph\u01b0\u1eddng 13"},{"id":195,"text":"Ph\u01b0\u1eddng 14"},{"id":196,"text":"Ph\u01b0\u1eddng 15"}],"16":[{"id":197,"text":"Ph\u01b0\u1eddng 01"},{"id":198,"text":"Ph\u01b0\u1eddng 02"},{"id":199,"text":"Ph\u01b0\u1eddng 03"},{"id":200,"text":"Ph\u01b0\u1eddng 04"},{"id":201,"text":"Ph\u01b0\u1eddng 05"},{"id":202,"text":"Ph\u01b0\u1eddng 06"},{"id":203,"text":"Ph\u01b0\u1eddng 07"},{"id":204,"text":"Ph\u01b0\u1eddng 08"},{"id":205,"text":"Ph\u01b0\u1eddng 09"},{"id":206,"text":"Ph\u01b0\u1eddng 10"},{"id":207,"text":"Ph\u01b0\u1eddng 11"},{"id":208,"text":"Ph\u01b0\u1eddng 12"},{"id":209,"text":"Ph\u01b0\u1eddng 13"},{"id":210,"text":"Ph\u01b0\u1eddng 14"},{"id":211,"text":"Ph\u01b0\u1eddng 15"},{"id":212,"text":"Ph\u01b0\u1eddng 16"}],"17":[{"id":213,"text":"Ph\u01b0\u1eddng An Ph\u00fa \u0110\u00f4ng"},{"id":223,"text":"Ph\u01b0\u1eddng \u0110\u00f4ng H\u01b0ng Thu\u1eadn"},{"id":214,"text":"Ph\u01b0\u1eddng Hi\u1ec7p Th\u00e0nh"},{"id":215,"text":"Ph\u01b0\u1eddng T\u00e2n Ch\u00e1nh Hi\u1ec7p"},{"id":216,"text":"Ph\u01b0\u1eddng T\u00e2n H\u01b0ng Thu\u1eadn"},{"id":217,"text":"Ph\u01b0\u1eddng T\u00e2n Th\u1edbi Hi\u1ec7p"},{"id":218,"text":"Ph\u01b0\u1eddng T\u00e2n Th\u1edbi Nh\u1ea5t"},{"id":219,"text":"Ph\u01b0\u1eddng Th\u1ea1nh L\u1ed9c"},{"id":220,"text":"Ph\u01b0\u1eddng Th\u1ea1nh Xu\u00e2n"},{"id":221,"text":"Ph\u01b0\u1eddng Th\u1edbi An"},{"id":222,"text":"Ph\u01b0\u1eddng Trung M\u1ef9 T\u00e2y"}],"18":[{"id":224,"text":"Ph\u01b0\u1eddng An L\u1ea1c"},{"id":225,"text":"Ph\u01b0\u1eddng An L\u1ea1c A"},{"id":227,"text":"Ph\u01b0\u1eddng B\u00ecnh H\u01b0ng Ho\u00e0 A"},{"id":229,"text":"Ph\u01b0\u1eddng B\u00ecnh Tr\u1ecb \u0110\u00f4ng"},{"id":231,"text":"Ph\u01b0\u1eddng B\u00ecnh Tr\u1ecb \u0110\u00f4ng B"},{"id":232,"text":"Ph\u01b0\u1eddng T\u00e2n T\u1ea1o"},{"id":233,"text":"Ph\u01b0\u1eddng T\u00e2n T\u1ea1o A"}],"19":[{"id":234,"text":"Ph\u01b0\u1eddng 01"},{"id":235,"text":"Ph\u01b0\u1eddng 02"},{"id":236,"text":"Ph\u01b0\u1eddng 03"},{"id":237,"text":"Ph\u01b0\u1eddng 05"},{"id":238,"text":"Ph\u01b0\u1eddng 06"},{"id":239,"text":"Ph\u01b0\u1eddng 07"},{"id":240,"text":"Ph\u01b0\u1eddng 11"},{"id":241,"text":"Ph\u01b0\u1eddng 12"},{"id":242,"text":"Ph\u01b0\u1eddng 13"},{"id":243,"text":"Ph\u01b0\u1eddng 14"},{"id":244,"text":"Ph\u01b0\u1eddng 15"},{"id":245,"text":"Ph\u01b0\u1eddng 17"},{"id":246,"text":"Ph\u01b0\u1eddng 19"},{"id":247,"text":"Ph\u01b0\u1eddng 21"},{"id":248,"text":"Ph\u01b0\u1eddng 22"},{"id":249,"text":"Ph\u01b0\u1eddng 24"},{"id":250,"text":"Ph\u01b0\u1eddng 25"},{"id":251,"text":"Ph\u01b0\u1eddng 26"},{"id":252,"text":"Ph\u01b0\u1eddng 27"},{"id":253,"text":"Ph\u01b0\u1eddng 28"}],"20":[{"id":254,"text":"Ph\u01b0\u1eddng 01"},{"id":255,"text":"Ph\u01b0\u1eddng 03"},{"id":256,"text":"Ph\u01b0\u1eddng 04"},{"id":257,"text":"Ph\u01b0\u1eddng 05"},{"id":258,"text":"Ph\u01b0\u1eddng 06"},{"id":259,"text":"Ph\u01b0\u1eddng 07"},{"id":260,"text":"Ph\u01b0\u1eddng 08"},{"id":261,"text":"Ph\u01b0\u1eddng 09"},{"id":262,"text":"Ph\u01b0\u1eddng 10"},{"id":263,"text":"Ph\u01b0\u1eddng 11"},{"id":264,"text":"Ph\u01b0\u1eddng 12"},{"id":265,"text":"Ph\u01b0\u1eddng 13"},{"id":266,"text":"Ph\u01b0\u1eddng 14"},{"id":267,"text":"Ph\u01b0\u1eddng 15"},{"id":268,"text":"Ph\u01b0\u1eddng 16"},{"id":269,"text":"Ph\u01b0\u1eddng 17"}],"21":[{"id":270,"text":"Ph\u01b0\u1eddng 01"},{"id":271,"text":"Ph\u01b0\u1eddng 02"},{"id":272,"text":"Ph\u01b0\u1eddng 03"},{"id":273,"text":"Ph\u01b0\u1eddng 04"},{"id":274,"text":"Ph\u01b0\u1eddng 05"},{"id":275,"text":"Ph\u01b0\u1eddng 07"},{"id":276,"text":"Ph\u01b0\u1eddng 08"},{"id":277,"text":"Ph\u01b0\u1eddng 09"},{"id":278,"text":"Ph\u01b0\u1eddng 10"},{"id":279,"text":"Ph\u01b0\u1eddng 11"},{"id":280,"text":"Ph\u01b0\u1eddng 12"},{"id":281,"text":"Ph\u01b0\u1eddng 13"},{"id":282,"text":"Ph\u01b0\u1eddng 14"},{"id":283,"text":"Ph\u01b0\u1eddng 15"},{"id":284,"text":"Ph\u01b0\u1eddng 17"}],"22":[{"id":285,"text":"Ph\u01b0\u1eddng 01"},{"id":286,"text":"Ph\u01b0\u1eddng 02"},{"id":287,"text":"Ph\u01b0\u1eddng 03"},{"id":288,"text":"Ph\u01b0\u1eddng 04"},{"id":289,"text":"Ph\u01b0\u1eddng 05"},{"id":290,"text":"Ph\u01b0\u1eddng 06"},{"id":291,"text":"Ph\u01b0\u1eddng 07"},{"id":292,"text":"Ph\u01b0\u1eddng 08"},{"id":293,"text":"Ph\u01b0\u1eddng 09"},{"id":294,"text":"Ph\u01b0\u1eddng 10"},{"id":295,"text":"Ph\u01b0\u1eddng 11"},{"id":296,"text":"Ph\u01b0\u1eddng 12"},{"id":297,"text":"Ph\u01b0\u1eddng 13"},{"id":298,"text":"Ph\u01b0\u1eddng 14"},{"id":299,"text":"Ph\u01b0\u1eddng 15"}],"23":[{"id":300,"text":"Ph\u01b0\u1eddng Hi\u1ec7p T\u00e2n"},{"id":301,"text":"Ph\u01b0\u1eddng H\u00f2a Th\u1ea1nh"},{"id":302,"text":"Ph\u01b0\u1eddng Ph\u00fa Th\u1ea1nh"},{"id":303,"text":"Ph\u01b0\u1eddng Ph\u00fa Th\u1ecd H\u00f2a"},{"id":304,"text":"Ph\u01b0\u1eddng Ph\u00fa Trung"},{"id":305,"text":"Ph\u01b0\u1eddng S\u01a1n K\u1ef3"},{"id":306,"text":"Ph\u01b0\u1eddng T\u00e2n Qu\u00fd"},{"id":307,"text":"Ph\u01b0\u1eddng T\u00e2n S\u01a1n Nh\u00ec"},{"id":308,"text":"Ph\u01b0\u1eddng T\u00e2n Th\u00e0nh"},{"id":309,"text":"Ph\u01b0\u1eddng T\u00e2n Th\u1edbi H\u00f2a"},{"id":310,"text":"Ph\u01b0\u1eddng T\u00e2y Th\u1ea1nh"}],"24":[{"id":311,"text":"Ph\u01b0\u1eddng B\u00ecnh Chi\u1ec3u"},{"id":312,"text":"Ph\u01b0\u1eddng B\u00ecnh Th\u1ecd"},{"id":313,"text":"Ph\u01b0\u1eddng Hi\u1ec7p B\u00ecnh Ch\u00e1nh"},{"id":314,"text":"Ph\u01b0\u1eddng Hi\u1ec7p B\u00ecnh Ph\u01b0\u1edbc"},{"id":315,"text":"Ph\u01b0\u1eddng Linh Chi\u1ec3u"},{"id":319,"text":"Ph\u01b0\u1eddng Linh \u0110\u00f4ng"},{"id":316,"text":"Ph\u01b0\u1eddng Linh T\u00e2y"},{"id":317,"text":"Ph\u01b0\u1eddng Linh Trung"},{"id":318,"text":"Ph\u01b0\u1eddng Linh Xu\u00e2n"},{"id":320,"text":"Ph\u01b0\u1eddng Tam B\u00ecnh"},{"id":321,"text":"Ph\u01b0\u1eddng Tam Ph\u00fa"},{"id":322,"text":"Ph\u01b0\u1eddng Tr\u01b0\u1eddng Th\u1ecd"}],"25":[{"id":323,"text":"T\u00e2n Ki\u1ec3ng"}],"26":[{"id":324,"text":"Ph\u01b0\u1eddng Ph\u01b0\u1edbc Ki\u1ec3n"}],"28":[{"id":327,"text":"Ph\u01b0\u1eddng B\u00ccnh Th\u1ecd"},{"id":330,"text":"Ph\u01b0\u1eddng Hi\u1ec7p B\u00ecnh Ch\u00e1nh"},{"id":331,"text":"Ph\u01b0\u1eddng Hi\u1ec7p B\u00ecnh Ph\u01b0\u1edbc"},{"id":332,"text":"Ph\u01b0\u1eddng Linh Chi\u1ec3u"},{"id":325,"text":"Ph\u01b0\u1eddng Linh \u0110\u00f4ng"},{"id":326,"text":"Ph\u01b0\u1eddng Linh T\u00e2y"},{"id":329,"text":"Ph\u01b0\u1eddng Tam Ph\u00fa"},{"id":328,"text":"Ph\u01b0\u1eddng Tr\u01b0\u1eddng Th\u1ecd"}],"29":[{"id":333,"text":"ph\u01b0\u1eddng B\u00ecnh Th\u1ecd"},{"id":334,"text":"Ph\u01b0\u1eddng Hi\u1ec7p B\u00ecnh Ch\u00e1nh"},{"id":335,"text":"Ph\u01b0\u1eddng Hi\u1ec7p B\u00ecnh Ph\u01b0\u1edbc"},{"id":338,"text":"Ph\u01b0\u1eddng Linh Chi\u1ec3u"},{"id":336,"text":"Ph\u01b0\u1eddng Linh \u0110\u00f4ng"},{"id":337,"text":"Ph\u01b0\u1eddng Linh T\u00e2y"},{"id":340,"text":"Ph\u01b0\u1eddng Tam Ph\u00fa"},{"id":339,"text":"Ph\u01b0\u1eddng Tr\u01b0\u1eddng Th\u1ecd"}],"30":[{"id":347,"text":"Ph\u01b0\u1eddng Hi\u1ec7p Ph\u00fa"},{"id":344,"text":"Ph\u01b0\u1eddng Ph\u01b0\u1edbc B\u00ecnh"},{"id":342,"text":"Ph\u01b0\u1eddng Ph\u01b0\u1edbc Long A"},{"id":343,"text":"Ph\u01b0\u1eddng Ph\u01b0\u1edbc Long B"},{"id":345,"text":"Ph\u01b0\u1eddng T\u0103ng Nh\u01a1n Ph\u00fa A"},{"id":346,"text":"Ph\u01b0\u1eddng T\u0103ng Nh\u01a1n Ph\u00fa B"}],"31":[{"id":348,"text":"Th\u1ea1nh M\u1ef9 L\u1ee3i"}],"32":[{"id":349,"text":"ph\u01b0\u1eddng Ph\u00fa M\u1ef9"}],"33":[{"id":351,"text":"Ph\u01b0\u1eddng 15"},{"id":350,"text":"Ph\u01b0\u1eddng 16"}]}</textarea>
+                </div>
+
+                <form action="https://fitfood.vn/payment/order" method="post">
+                    <div class="box-product my-4">
+                        <div class="box-title d-none d-md-block mb-4">
+                            <div class="row">
+                                <div class="col-6 name">Tên sản phẩm</div>
+                                <div class="col-2">Giá</div>
+                                <div class="col-2">Số lượng</div>
+                                <div class="col-2 price">Tổng đơn hàng</div>
+                            </div>
+                        </div>
+                        <div class="box-content">
+                            <div class="list-items">
+                                <div class="item">
+                                    <div class="row d-flex">
+                                        <div class="col-3 col-md-6 name d-flex">
+                                            <img src="https://fitfood.vn/static/sizes/500x300-full-16865621869624.jpeg"
+                                                class="img-fluid">
+                                            <span class="d-none d-md-block">Gói FULL </span>
+                                        </div>
+                                        <div class="col-9 col-md-6">
+                                            <div class="row">
+                                                <div class="col-6 d-md-none px-0">
+                                                    Gói FULL
+                                                </div>
+                                                <div class="col-6 col-md-4 text-right">
+                                                    450,000<u>đ</u>
+                                                </div>
+                                                <div class="col-6 col-md-4 text-left text-md-center px-0">
+                                                    <span class="d-md-none">x</span>1
+                                                </div>
+                                                <div class="col-6 col-md-4 price text-right">
+                                                    450,000đ
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="total d-flex justify-content-between d-md-block text-right">
+                                <span>Tạm tính:</span>
+                                <span class="text-price"><strong>450,000</strong>đ</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-payment-info">
+                        <input type="hidden" name="address_id" value="">
+                        <input type="hidden" id="url-discount" value="https://fitfood.vn/payment/discount">
+                        <div class="row">
+                            <div class="col-md-6 payment-method">
+                                <div class="payment">
+                                    <div class="form-group row">
+                                        <label for="" class="col-md-5">Mã khuyến mãi</label>
+                                        <div class="col-md-7 discount">
+                                            <input class="form-control" id="discount_code" name="discount_code"
+                                                placeholder="Nhập mã">
+                                            <button type="button" id="discount-apply"
+                                                class="btn btn-primary btn-block">Áp dụng</button>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="" class="col-md-5">Thời gian giao hàng</label>
+                                        <div class="col-md-7">
+                                            <select class="form-control" id="delivery_time" name="delivery_time">
+                                                <option value="">Thời gian giao hàng</option>
+                                                <option value="5">7:30 - 8:00am</option>
+                                                <option value="1">8:00 - 8:30am</option>
+                                                <option value="2">8:30 - 9:00am</option>
+                                                <option value="7">9:00 - 9:30am</option>
+                                                <option value="4">9:30 - 10:00am</option>
+                                                <option value="8">10:00 - 10:30am</option>
+                                                <option value="6">10:30 - 11:00am</option>
+                                                <option value="3">Tối hôm trước ( 19:00 - 22:00 ) </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="" class="col-md-5">Phương thức thanh toán</label>
+                                        <div class="col-md-7">
+                                            <select class="form-control" name="pay_method" id="pay_method">
+                                                <option value="CASH">Thanh toán tiền mặt</option>
+                                                <option value="ALEYPAY">Thanh toán thẻ (có phí)</option>
+                                                <option value="MOMO">Momo</option>
+                                                <option value="BANK VCB">Chuyển khoản Vietcombank</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group mt-md-4">
+                                        <label for="">Note</label>
+                                        <textarea class="form-control" name="note_order"
+                                            placeholder="Ghi chú về các thành phần bị dị ứng (nếu có)"></textarea>
+                                    </div>
+                                    <div class="form-group mt-md-4">
+                                        <label for="">Note</label>
+                                        <textarea class="form-control" name="note"
+                                            placeholder="Ghi chú về địa chỉ giao hàng (block chung cư, tên tòa nhà văn phòng...)"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 offset-lg-2 col-lg-4 mb-3 text-right payment-summary">
+                                <div class="row mb-md-2">
+                                    <div class="col-7">Phí ship</div>
+                                    <div class="col-5 price">0đ</div>
+                                </div>
+                                <div class="row mb-md-2">
+                                    <div class="col-7">Giảm giá</div>
+                                    <div class="col-5 price">0đ</div>
+                                </div>
+                                <div id="wrap-fee" class="row mb-md-2" style="display: none">
+                                    <div class="col-7">Phí thanh toán</div>
+                                    <div class="col-5 price"><span></span>đ</div>
+                                </div>
+                                <div id="wrap-total-final" class="row total mt-md-4">
+                                    <div class="col-7">Tổng đơn hàng:</div>
+                                    <div class="col-5 text-price"><strong>450,000</strong>đ</div>
+                                </div>
+                                <input type="hidden" id="p-total-final" value="450000">
+                                <textarea id="p-pay-method"
+                                    style="display: none">{"CASH":0,"ALEYPAY":0,"MOMO":0,"BANK VCB":0}</textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-payment">
+
+                        <div class="row align-items-center justify-content-between">
+                            <div class="col-6 col-md-3 col-lg-2 order-md-1">
+                                <a href="https://fitfood.vn/cart" class="btn btn-outline-dark btn-block">Trở về</a>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3 order-md-3 text-right">
+                                <span id="cart-error" style="display: none;"></span>
+                                <span id="cart-validation" data-delivery="Vui lòng chọn thời gian giao hàng"
+                                    data-address="Chưa nhập địa chỉ giao hàng"></span>
+                                <button type="button" class="btn btn-primary btn-block submit-payment submit">Hoàn
+                                    thành</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="footer-main">
+        <div class="container">
+            <a href="/" class="mb-4 d-block">
+                <img src="../img/logo-fitfood.png" alt="fitfoodvn" border="0" />
+            </a>
+            <div class="widget-footer mb-4">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <h4>Công ty TNHH Fitfood</h4>
+                        <p>
+                            <strong>Địa chỉ</strong> 33 Đường 14, KDC Bình Hưng, Ấp 2, Huyện Bình Chánh, TPHCM<br />
+                            <strong>Điện thoại</strong> (+84) 932 788 120 [hotline]<br />
+                            <strong>Email</strong> info@fitfood.vn. For business inquiries: business@fitfood.vn<br />
+                            <strong>MST</strong> 0313272749 do Sở kế hoạch và đầu tư TPHCM cấp ngày 26/05/2015
+                        </p>
+                        <div class="row">
+                            <div class="col-12 form-group">
+                                <form action="https://fitfood.vn/search" class="form-search">
+                                    <div class="search-control s-home">
+                                        <input type="text" class="form-control s-search" name="s" placeholder="Tìm kiếm"
+                                            value="">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <h4>Điều khoản chung</h4>
+                        <ul>
+                            <li><a href="https://fitfood.vn/page/chinh-sach-quy-dinh-chung">Chính Sách Quy Định
+                                    Chung</a></li>
+                            <li><a href="https://fitfood.vn/page/quy-dinh-hinh-thuc-thanh-toan">Quy Định Hình Thức Thanh
+                                    Toán</a></li>
+                            <li><a href="https://fitfood.vn/page/chinh-sach-van-chuyen-giao-hang">Chính Sách Vận Chuyển
+                                    Giao Hàng</a></li>
+                            <li><a href="https://fitfood.vn/page/chinh-sach-bao-mat-thong-tin">Chính Sách Bảo Mật Thông
+                                    Tin</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <h4>Theo dõi chúng tôi tại</h4>
+                        <div class="social mb-3">
+                            <a href="https://www.facebook.com/fitfoodvietnam" target="_blank">
+                                <img src="../img/ic-fb.png" alt="fitfoodvietnam" border="0" />
+                            </a>
+                            <a href="https://www.instagram.com/fitfoodvn" target="_blank">
+                                <img src="../img/ic-instagram.png" alt="fitfoodvn" border="0" />
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=CJ6eTsFdd1I" target="_blank">
+                                <img src="../img/ic-youtube.png" alt="fitfoodvn" border="0" />
+                            </a>
+                        </div>
+                        <div>
+                            <a href="http://online.gov.vn/HomePage/CustomWebsiteDisplay.aspx?DocId=34289"
+                                target="_blank">
+                                <img src="../img/logo-bocongthuong.png" alt="fitfoodvn" border="0"
+                                    width="120px" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright mb-0">© Copyright 2023 Fitfood. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

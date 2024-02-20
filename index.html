@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <meta name="lang" content="vi">
+
+    <title>Fitfood VN </title>
+
+    <link rel="stylesheet" href="../css/index1.css">
+    <link rel="stylesheet" href="../css/index2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body data-page="home" data-device="desktop" class="" data-url="https://fitfood.vn" data-lang="vi">
+
+    <nav id="main-menu" class="navbar navbar-expand-xl navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand mr-auto logo-header" href="https://fitfood.vn">
+            <img src="../img/logo-fitfood.png" alt="" border="0" />
+        </a>
+        <ul class="nav navbar-nav mr-auto ml-xl-auto order-2 order-xl-0">
+            <li class="nav-item">
+                <a class="active nav-link" href="https://fitfood.vn">
+                    Trang chủ
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="https://fitfood.vn/menu">
+                    Thực đơn
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="https://fitfood.vn/consult">
+                    Tư Vấn
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="https://fitfood.vn/order">
+                    Đặt hàng
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="../html/tintuc.html">
+                    Tin tức
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="https://fitfood.vn/faqs">
+                    FAQs
+                </a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-sub flex-row order-1 order-xl-0">
+            <!-- Chưa đăng nhập -->
+            <li class="nav-item"><a id="btn-register" href="javascript:void(0)" class="nav-link" data-dismiss="modal"
+                    data-toggle="modal" data-target="#sign-up">Đăng ký</a></li>
+            <li class="nav-item"><a id="btn-login" href="javascript:void(0)" class="nav-link" data-dismiss="modal"
+                    data-require="" data-toggle="modal" data-target="#sign-in">Đăng nhập</a></li>
+        </ul>
+        </div>
+
+        <div id="cart-list" class="shopping-cart order-2 order-xl-0 has-banner"
+            data-url-list="https://fitfood.vn/cart/list" data-url-remove="https://fitfood.vn/cart/package/remove">
+            <a href="javascript:void(0)" id="cart" data-total="0">
+                <span class="badge hide">0</span>
+            </a>
+            <div class="list-order-cart">
+                <a href="javascript:void(0)" class="close"><i class="fa fa-times" aria-hidden="true"></i></a>
+                <div class="title mb-4">Giỏ hàng</div>
+                <div id="cart-list-content">
+                </div>
+            </div>
+            <div class="overlay"></div>
+        </div>
+
+        <div class="language desktop-visible order-3 order-sm-0">
+            <span class="lang-switch " data-lang="en">
+                <span class="d-none d-sm-block">EN</span>
+            </span>
+            <span class="arrow">/</span>
+            <span class="lang-switch  active" data-lang="vi">
+                <span class="d-none d-sm-block">VI</span>
+            </span>
+        </div>
+    </nav>
+
+    <main class="">
+        <!-- main slider -->
+        <section class="main-banner">
+            <ul class="bxslider">
+                <li>
+                    <div class="featured-img lazy"
+                    data-url="https://fitfood.vn/img/1920x800/images/slider1-15806139815383.jpg"
+                        style="background-image: url(../img/slider1-15806139815383.jpg)">
+                        <p class="title">
+                            <small>Kế hoạch bữa ăn hàng tuần cho </small> một lối sống lành mạnh
+                        </p>
+                        <a href="https://fitfood.vn/order" class="btn btn-primary">Đặt Ngay</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="featured-img lazy"
+                        data-url="https://fitfood.vn/img/1920x800/images/slider-1-15808098034421.jpg"
+                        style="background-image: url(../img/slider-1-15808098034421.jpg)">
+                        <p class="title">
+                            Trải nghiệm bữa ăn sạch <small>tươi ngon giàu dinh dưỡng</small>
+                        </p>
+                        <a href="https://fitfood.vn/order" class="btn btn-primary">Đặt Ngay</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="featured-img lazy"
+                        data-url="https://fitfood.vn/img/1920x800/images/7-15772636678681.jpg"
+                        style="background-image: url(../img/7-15772636678681.jpg)">
+                        <p class="title">
+                            <small>Nhà cung cấp bữa ăn sạch</small>lớn nhất Sài Gòn
+                        </p>
+                        <a href="https://fitfood.vn/order" class="btn btn-primary"></a>
+                    </div>
+                </li>
+                <li>
+                    <div class="featured-img lazy" data-url="https://fitfood.vn/img/1920x800/images/6-1577263795602.jpg"
+                        style="background-image: url(../img/6-1577263795602.jpg)">
+                        <p class="title">
+                            Giải pháp HEALTHY FOOD <small>giao tận nơi</small>
+                        </p>
+                        <a href="https://fitfood.vn/order" class="btn btn-primary"></a>
+                    </div>
+                </li>
+            </ul>
+
+        </section>
+        <!-- main about -->
+        <section class="main-about">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-7 px-0 order-2 order-md-0">
+                        <img src="/images/img-about-mobile.png?t=456" alt="Giới thiệu" border="0"
+                            class="img-fluid d-md-none" />
+                    </div>
+                    <div class="col-md-5 col-lg-4 order-1 order-md-0">
+                        <h2 class="title pb-4 mb-4">Giới thiệu</h2>
+                        <p>Fitfood VN cung cấp các phần ăn lành mạnh hàng tuần giúp bạn duy trì một lối sống khỏe. Chúng
+                            tôi tập trung vào chế độ ăn cân bằng được thiết kế chuyên biệt để hỗ trợ bạn kiểm soát cân
+                            nặng một cách hiệu quả nhất.
+                        </p>
+                        Nếu bạn đang tìm kiếm những bữa ăn ngon và tốt cho sức khỏe được chuẩn bị sẵn ở Saigon thì
+                        Fitfood là một lựa chọn tối ưu. Thực đơn đa dạng với hơn 100 món của chúng tôi có thể giúp bạn
+                        thưởng thức mà không ngán trong hơn 1 tháng.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- how it work -->
+        <section class="how-it-work">
+            <div class="container-fluid">
+                <h2 class="title title-center pb-4 mb-5">Cách đặt hàng</h2>
+                <div class="row">
+                    <div class="offset-xl-1 col-xl-10">
+                        <div class="row slider">
+                            <div class="col-md-6 col-lg-3 mb-3">
+                                <div class="item">
+                                    <img src="../img/chon_goi.png" alt="">
+                                    <p class="title">Chọn Gói Ăn</p>
+                                    <p>Chọn gói ăn phù hợp với nhu cầu của bạn và điền đầy đủ thông tin giao hàng</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3 mb-3">
+                                <div class="item">
+                                    <img src="../img/fitfood_nau.png" alt="">
+                                    <p class="title">Fitfood nấu</p>
+                                    <p>Chúng tôi lựa chọn những nguyên liệu tốt nhất và nấu trong bếp công nghiệp hiện
+                                        đại</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3 mb-3">
+                                <div class="item">
+                                    <img src="../img/giao_hang.png" alt="">
+                                    <p class="title">Giao hàng</p>
+                                    <p>Đội ngũ giao hàng của Fitfood sẽ giao tận nơi các phần ăn cho bạn mỗi ngày</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3 mb-3">
+                                <div class="item">
+                                    <img src="../img/Thuong_thuc.png" alt="">
+                                    <p class="title">Thưởng thức</p>
+                                    <p>Không cần suy nghĩ, shopping hay nấu nướng dầu mỡ, chỉ cần hâm và thưởng thức!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- featured product -->
+        <section class="featured-product">
+            <div class="container">
+                <h2 class="title title-center pb-4 mb-4">Sản phẩm tiêu biểu</h2>
+                <p class="des mb-5">Fitfood cung cấp nhiều gói ăn và thực phẩm dùng kèm đa dạng phù hợp với mọi nhu cầu
+                    của bạn</p>
+                <div class="products">
+                    <div class="products">
+                        <div class="row product-listing">
+                            <div class="col-md-3">
+                                <div class="listing-item" data-id="full" data-type="package">
+                                    <div class="card">
+                                        <a href="../html/sanpham.html" class="link">
+                                            <img src="../img/260x200-full-16865621869624.jpeg"
+                                                class="card-img-top" alt="Gói FULL">
+                                        </a>
+                                        <div class="card-body">
+                                            <a href="../html/sanpham.html" class="link-text">
+                                                <h3 class="card-title d-flex justify-content-between">Gói FULL</h3>
+                                            </a>
+                                            <span>750,000đ</span>
+                                            <span class="icon"><i class="fa-solid fa-shopping" 
+                                                aria-hidden="true"><img src="../img/gio_hang.png" alt="" style="float: right;"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="listing-item" data-id="fit3" data-type="package">
+                                    <div class="card">
+                                        <a href="../html/sanpham.html" class="link">
+                                            <img src="../img/260x200-fit-3-16865623008515.jpeg"
+                                                class="card-img-top" alt="Gói FIT 3">
+                                        </a>
+                                        <div class="card-body">
+                                            <a href="../html/sanpham.html" class="link-text">
+                                                <h3 class="card-title d-flex justify-content-between">Gói FIT 3</h3>
+                                            </a>
+                                            <span>600,000đ</span>
+                                            <span class="icon"><i class="fa-solid fa-shopping"
+                                                    aria-hidden="true"><img src="../img/gio_hang.png" alt="" style="float: right;"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="listing-item" data-id="fit1" data-type="package">
+                                    <div class="card">
+                                        <a href="../html/sanpham.html" class="link">
+                                            <img src="../img/260x200-fit1-15815879666463-16865549089597.jpeg"
+                                                class="card-img-top" alt="Gói FIT 1">
+                                        </a>
+                                        <div class="card-body">
+                                            <a href="../html/sanpham.html" class="link-text">
+                                                <h3 class="card-title d-flex justify-content-between">Gói FIT 1</h3>
+                                            </a>
+                                            <span>600,000đ</span>
+                                            <span class="icon"><i class="fa-solid fa-shopping"
+                                                aria-hidden="true"><img src="../img/gio_hang.png" alt="" style="float: right;"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="listing-item" data-id="fit2" data-type="package">
+                                    <div class="card">
+                                        <a href="../html/sanpham.html" class="link">
+                                            <img src="../img/260x200-fit-2-1686562379904.jpeg"
+                                                class="card-img-top" alt="Gói FIT 2">
+                                        </a>
+                                        <div class="card-body">
+                                            <a href="../html/sanpham.html" class="link-text">
+                                                <h3 class="card-title d-flex justify-content-between">Gói FIT 2</h3>
+                                            </a>
+                                            <span>600,000đ</span>
+                                            <span class="icon"><i class="fa-solid fa-shopping"
+                                                aria-hidden="true"><img src="../img/gio_hang.png" alt="" style="float: right;"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="listing-item" data-id="meat-s" data-type="package">
+                                    <div class="card">
+                                        <a href="../html/sanpham.html" class="link">
+                                            <img src="../img/meat-s-15815882837148.jpg"
+                                                class="card-img-top" alt="Gói MEAT-S">
+                                        </a>
+                                        <div class="card-body">
+                                            <a href="../html/sanpham.html" class="link-text">
+                                                <h3 class="card-title d-flex justify-content-between">Gói MEAT-S</h3>
+                                            </a>
+                                            <span>1,200,000đ</span>
+                                            <span class="icon"><i class="fa-solid fa-shopping"
+                                                aria-hidden="true"><img src="../img/gio_hang.png" alt="" style="float: right;"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="listing-item" data-id="meat" data-type="package">
+                                    <div class="card">
+                                        <a href="../html/sanpham.html" class="link">
+                                            <img src="../img/meat-15814245934955.jpg"
+                                                class="card-img-top" alt="Gói MEAT">
+                                        </a>
+                                        <div class="card-body">
+                                            <a href="../html/sanpham.html" class="link-text">
+                                                <h3 class="card-title d-flex justify-content-between">Gói MEAT</h3>
+                                            </a>
+                                            <span>950,000đ</span>
+                                            <span class="icon"><i class="fa-solid fa-shopping"
+                                                aria-hidden="true"><img src="../img/gio_hang.png" alt="" style="float: right;"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="listing-item" data-id="veg" data-type="package">
+                                    <div class="card">
+                                        <a href="../html/sanpham.html" class="link">
+                                            <img src="../img/260x200-chay-16865624504143.jpeg"
+                                                class="card-img-top" alt="Gói CHAY">
+                                        </a>
+                                        <div class="card-body">
+                                            <a href="../html/sanpham.html" class="link-text">
+                                                <h3 class="card-title d-flex justify-content-between">Gói CHAY</h3>
+                                            </a>
+                                            <span>600,000đ</span>
+                                            <span class="icon"><i class="fa-solid fa-shopping"
+                                                aria-hidden="true"><img src="../img/gio_hang.png" alt="" style="float: right;"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- environmental friendly -->
+        <section class="environmental">
+            <div class="container">
+                <h2 class="title title-center pb-4 mb-5">Chung tay bảo vệ<strong>Môi trường</strong></h2>
+                <div class="row slider">
+                    <div class="col-md-4 item">
+                        <img src="../img/dsc04248-15668117116574.png"
+                            alt="Nhà cung cấp duy nhất sử dung túi Nylon sinh học tự hủy thân thiện với môi trường"
+                            border="0" class="img-fluid" />
+                        <p>Nhà cung cấp duy nhất sử dung túi Nylon sinh học tự hủy thân thiện với môi trường</p>
+                    </div>
+                    <div class="col-md-4 item">
+                        <img src="../img/dsc04268-15668122623444.png"
+                            alt="Rửa sạch lại hộp nhựa đen để nhận hoàn tiền 10,000 cho mỗi 10 hộp" border="0"
+                            class="img-fluid" />
+                        <p>Rửa sạch lại hộp nhựa đen để nhận hoàn tiền 10,000 cho mỗi 10 hộp</p>
+                    </div>
+                    <div class="col-md-4 item">
+                        <img src="../img/dsc04263-15668117777881.png"
+                            alt="Fitfood chỉ cung cấp 01 bộ muỗng nĩa mỗi ngày để giảm thiểu rác thải nhựa" border="0"
+                            class="img-fluid" />
+                        <p>Fitfood chỉ cung cấp 01 bộ muỗng nĩa mỗi ngày để giảm thiểu rác thải nhựa</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- testimonial -->
+        <section class="testimonial" style="background-image: url(../img/bg-testimonial.jpg);">
+            <div class="container">
+                <h2 class="title title-center pb-4 mb-4">Câu chuyện khách hàng</h2>
+                <p class="text-center">Những câu chuyện thành công từ khách hàng thân yêu của Fitfood</p>
+                <div class="testimonial-gallery">
+                    <div class="testimonial-item testimonial-first">
+                        <a href="#"
+                            data-lightbox="testimonial">
+                            <img src="../img/recipe-detox-4-16788506023179.png"
+                                alt="Câu chuyện khách hàng-0" />
+                        </a>
+                    </div>
+                    <div class="testimonial-item ">
+                        <a href="#"
+                            data-lightbox="testimonial">
+                            <img src="../img/r.jpg"
+                                alt="Câu chuyện khách hàng-1" />
+                        </a>
+                    </div>
+                    <div class="testimonial-item ">
+                        <a href="#"
+                            data-lightbox="testimonial">
+                            <img src="../img/recipe-detox-5-16788507949267.png"
+                                alt="Câu chuyện khách hàng-2" />
+                        </a>
+                    </div>
+                    <div class="testimonial-item ">
+                        <a href="#"
+                            data-lightbox="testimonial">
+                            <img src="../img/recipe-detox-6-16788511450995.png"
+                                alt="Câu chuyện khách hàng-3" />
+                        </a>
+                    </div>
+                    <div class="testimonial-item ">
+                        <a href="#"
+                            data-lightbox="testimonial">
+                            <img src="../img/recipe-detox-9-16788535240581.png"
+                                alt="Câu chuyện khách hàng-4" />
+                        </a>
+                    </div>
+                    <div class="testimonial-item ">
+                        <a href="#"
+                            data-lightbox="testimonial">
+                            <img src="../img/recipe-detox-8-16788532069444.png"
+                                alt="Câu chuyện khách hàng-5" />
+                        </a>
+                    </div>
+                    <div class="testimonial-item ">
+                        <a href="#"
+                            data-lightbox="testimonial">
+                            <img src="../img/recipe-detox-12-16788559734466.png"
+                                alt="Câu chuyện khách hàng-6" />
+                        </a>
+                    </div>
+                    <div class="testimonial-item ">
+                        <a href="#"
+                            data-lightbox="testimonial">
+                            <img src="../img/recipe-detox-2-16788500351865.png"
+                                alt="Câu chuyện khách hàng-7" />
+                        </a>
+                    </div>
+                    <div class="testimonial-item ">
+                        <a href="#"
+                            data-lightbox="testimonial">
+                            <img src="../img/recipe-detox-10-16788541906051.png"
+                                alt="Câu chuyện khách hàng-8" />
+                        </a>
+                    </div>
+                    <div class="testimonial-item ">
+                        <a href="#"
+                            data-lightbox="testimonial">
+                            <img src="../img/recipe-detox-11-16788545928511.png"
+                                alt="Câu chuyện khách hàng-9" />
+                        </a>
+                    </div>
+                    <div class="testimonial-item ">
+                        <a href="#"
+                            data-lightbox="testimonial">
+                            <img src="../img/recipe-detox-13-16788563829266.png"
+                                alt="Câu chuyện khách hàng-10" />
+                        </a>
+                    </div>
+                    <div class="testimonial-item ">
+                        <a href="#"
+                            data-lightbox="testimonial">
+                            <img src="../img/recipe-detox-14-16788566140229.png"
+                                alt="Câu chuyện khách hàng-11" />
+                        </a>
+                    </div>
+                    <div class="testimonial-item ">
+                        <a href="#"
+                            data-lightbox="testimonial">
+                            <img src="../img/recipe-detox-15-16788568613617.png"
+                                alt="Câu chuyện khách hàng-12" />
+                        </a>
+                    </div>
+                    <div class="testimonial-item ">
+                        <a href="#"
+                            data-lightbox="testimonial">
+                            <img src="../img/recipe-detox-16-16788570675027.png"
+                                alt="Câu chuyện khách hàng-13" />
+                        </a>
+                    </div>
+                    <div class="testimonial-item ">
+                        <a href="#"
+                            data-lightbox="testimonial">
+                            <img src="../img/recipe-detox-17-1678859279263.png"
+                                alt="Câu chuyện khách hàng-14" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- partners -->
+        <section class="partners">
+            <div class="container">
+                <h2 class="title title-center pb-4 mb-4">Đối tác</h2>
+                <p class="text-center">Chúng tôi hợp tác với các nhà cung cấp hàng đầu để đảm bảo chất lượng trải nghiệm
+                    tốt nhất</p>
+                <div class="text-center">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://fitfood.vn/img/160x0/images/logo-star-kombucha-16014620887392.png"
+                                alt="Đối tác-0" border="0" class="img-fluid" />
+                        </div>
+                        <div class="col-2">
+                            <img src="https://fitfood.vn/img/160x0/images/megamarket-15625154298117.png" alt="Đối tác-1"
+                                border="0" class="img-fluid" />
+                        </div>
+                        <div class="col-2">
+                            <img src="https://fitfood.vn/img/160x0/images/payoo-15625154518087.png" alt="Đối tác-2"
+                                border="0" class="img-fluid" />
+                        </div>
+                        <div class="col-2">
+                            <img src="https://fitfood.vn/img/160x0/images/nakayama-15625155077656.png" alt="Đối tác-3"
+                                border="0" class="img-fluid" />
+                        </div>
+                        <div class="col-2">
+                            <img src="https://fitfood.vn/img/160x0/images/jafpa-15694083848488.png" alt="Đối tác-4"
+                                border="0" class="img-fluid" />
+                        </div>
+                        <div class="col-2">
+                            <img src="https://fitfood.vn/img/160x0/images/vineco-15685206922536.png" alt="Đối tác-5"
+                                border="0" class="img-fluid" />
+                        </div>
+                        <div class="col-2">
+                            <img src="https://fitfood.vn/img/160x0/images/logo-15686011892226.png" alt="Đối tác-6"
+                                border="0" class="img-fluid" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- clients -->
+        <section class="clients">
+            <div class="container">
+                <h2 class="title title-center pb-4 mb-4">Khách hàng</h2>
+                <p class="text-center">Fitfood tự hào là lựa chọn ưu tiên hàng đầu của các doanh nghiệp lớn trong và
+                    ngoài nước<br>(Click vào logo để xem hình ảnh thực tế sự kiện)<br>Liên hệ business@fitfood.vn để đặt
+                    tiệc ngay</p>
+                <div class="text-center">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://fitfood.vn/img/160x0/images/logo-tiki-png-16039561972419.png"
+                                alt="Khách hàng-0" border="0" class="img-fluid"
+                                data-link="https://www.facebook.com/fitfoodvietnam/posts/3616542075080640" />
+                        </div>
+                        <div class="col-2">
+                            <img src="https://fitfood.vn/img/160x0/images/coop-15694086865358.png" alt="Khách hàng-1"
+                                border="0" class="img-fluid"
+                                data-link="https://www.facebook.com/fitfoodvietnam/posts/2011782072223323" />
+                        </div>
+                        <div class="col-2">
+                            <img src="https://fitfood.vn/img/160x0/images/purepngcom-cbre-group-logologobrand-logoiconslogos-251519938205ihnco-15694087115306.png"
+                                alt="Khách hàng-2" border="0" class="img-fluid" />
+                        </div>
+                        <div class="col-2">
+                            <img src="https://fitfood.vn/img/160x0/images/capitaland-15625157025955.png"
+                                alt="Khách hàng-3" border="0" class="img-fluid"
+                                data-link="https://www.facebook.com/fitfoodvietnam/posts/1497494200318782" />
+                        </div>
+                        <div class="col-2">
+                            <img src="https://fitfood.vn/img/160x0/images/foody-vn-15722523466575.png"
+                                alt="Khách hàng-4" border="0" class="img-fluid" />
+                        </div>
+                        <div class="col-2">
+                            <img src="https://fitfood.vn/img/160x0/images/salonpassvg-16720344297781.png"
+                                alt="Khách hàng-5" border="0" class="img-fluid"
+                                data-link="https://www.facebook.com/fitfoodvietnam/posts/pfbid02K11bQn69ueZ5tyZqNdhR7XBCoUGRnKiBJ3AY3EvGuHsY2cYDf8hFycAmfdYWkW2Jl" />
+                        </div>
+                        <div class="col-2">
+                            <img src="https://fitfood.vn/img/160x0/images/pocari-16720345232747.png" alt="Khách hàng-6"
+                                border="0" class="img-fluid"
+                                data-link="https://www.facebook.com/story.php?story_fbid=pfbid02zKyQfhV1qVYALFphjLG93os8bJ89kkogbNtBDgSP4SqP2qBz2EpQxUjR1cF2WdY1l&id=765002226901320&mibextid=qC1gEa" />
+                        </div>
+                        <div class="col-2">
+                            <img src="https://fitfood.vn/img/160x0/images/saigon-heat-15685204405616.png"
+                                alt="Khách hàng-7" border="0" class="img-fluid"
+                                data-link="https://www.facebook.com/fitfoodvietnam/posts/2219584664776395?__tn__=-R" />
+                        </div>
+                        <div class="col-2">
+                            <img src="https://fitfood.vn/img/160x0/images/pngegg-16039562872612.png" alt="Khách hàng-8"
+                                border="0" class="img-fluid" />
+                        </div>
+                        <div class="col-2">
+                            <img src="https://fitfood.vn/img/160x0/images/14511723-gigamalllogo-01-15685392974799.png"
+                                alt="Khách hàng-9" border="0" class="img-fluid" />
+                        </div>
+                        <div class="col-2">
+                            <img src="https://fitfood.vn/img/160x0/images/yogaplus-15685199991712.png"
+                                alt="Khách hàng-10" border="0" class="img-fluid"
+                                data-link="https://www.facebook.com/fitfoodvietnam/posts/1563990160335852" />
+                        </div>
+                        <div class="col-2">
+                            <img src="https://fitfood.vn/img/160x0/images/calikids-logo1-15685393085725.png"
+                                alt="Khách hàng-11" border="0" class="img-fluid"
+                                data-link="https://www.facebook.com/fitfoodvietnam/posts/1554723061262562" />
+                        </div>
+                        <div class="col-2">
+                            <img src="https://fitfood.vn/img/160x0/images/techcomrun-small-15753651582381.png"
+                                alt="Khách hàng-12" border="0" class="img-fluid"
+                                data-link="https://www.facebook.com/fitfoodvietnam/posts/2797625350305654?__tn__=-R" />
+                        </div>
+                        <div class="col-2">
+                            <img src="https://fitfood.vn/img/160x0/images/aia-logo-15685202507269.png"
+                                alt="Khách hàng-13" border="0" class="img-fluid"
+                                data-link="https://www.facebook.com/fitfoodvietnam/posts/1615840338484167" />
+                        </div>
+                        <div class="col-2">
+                            <img src="https://fitfood.vn/img/160x0/images/vba-1-15685395342121.png" alt="Khách hàng-14"
+                                border="0" class="img-fluid"
+                                data-link="https://www.facebook.com/fitfoodvietnam/posts/2319944984740362?__tn__=-R" />
+                        </div>
+                        <div class="col-2">
+                            <img src="https://fitfood.vn/img/160x0/images/screen-shot-2018-09-24-at-10335-pm-15765048736728.png"
+                                alt="Khách hàng-15" border="0" class="img-fluid"
+                                data-link="https://www.facebook.com/pg/fitfoodvietnam/photos/?tab=album&album_id=2090956250972571" />
+                        </div>
+                        <div class="col-2">
+                            <img src="https://fitfood.vn/img/160x0/images/dreamplex-15686014633263.png"
+                                alt="Khách hàng-16" border="0" class="img-fluid"
+                                data-link="https://www.facebook.com/pg/fitfoodvietnam/photos/?tab=album&album_id=1953831284685069" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer-main">
+        <div class="container">
+            <a href="/" class="mb-4 d-block">
+                <img src="../img/logo-fitfood.png" alt="fitfoodvn" border="0" />
+            </a>
+            <div class="widget-footer mb-4">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <h4>Công ty TNHH Fitfood</h4>
+                        <p>
+                            <strong>Địa chỉ</strong> 33 Đường 14, KDC Bình Hưng, Ấp 2, Huyện Bình Chánh, TPHCM<br />
+                            <strong>Điện thoại</strong> (+84) 932 788 120 [hotline]<br />
+                            <strong>Email</strong> info@fitfood.vn. For business inquiries: business@fitfood.vn<br />
+                            <strong>MST</strong> 0313272749 do Sở kế hoạch và đầu tư TPHCM cấp ngày 26/05/2015
+                        </p>
+                        <div class="row">
+                            <div class="col-12 form-group">
+                                <form action="https://fitfood.vn/search" class="form-search">
+                                    <div class="search-control s-home">
+                                        <input type="text" class="form-control s-search" name="s" placeholder="Tìm kiếm"
+                                            value="">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <h4>Điều khoản chung</h4>
+                        <ul>
+                            <li><a href="https://fitfood.vn/page/chinh-sach-quy-dinh-chung">Chính Sách Quy Định
+                                    Chung</a></li>
+                            <li><a href="https://fitfood.vn/page/quy-dinh-hinh-thuc-thanh-toan">Quy Định Hình Thức Thanh
+                                    Toán</a></li>
+                            <li><a href="https://fitfood.vn/page/chinh-sach-van-chuyen-giao-hang">Chính Sách Vận Chuyển
+                                    Giao Hàng</a></li>
+                            <li><a href="https://fitfood.vn/page/chinh-sach-bao-mat-thong-tin">Chính Sách Bảo Mật Thông
+                                    Tin</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <h4>Theo dõi chúng tôi tại</h4>
+                        <div class="social mb-3">
+                            <a href="https://www.facebook.com/fitfoodvietnam" target="_blank">
+                                <img src="../img/ic-fb.png" alt="fitfoodvietnam" border="0" />
+                            </a>
+                            <a href="https://www.instagram.com/fitfoodvn" target="_blank">
+                                <img src="../img/ic-instagram.png" alt="fitfoodvn" border="0" />
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=CJ6eTsFdd1I" target="_blank">
+                                <img src="../img/ic-youtube.png" alt="fitfoodvn" border="0" />
+                            </a>
+                        </div>
+                        <div>
+                            <a href="http://online.gov.vn/HomePage/CustomWebsiteDisplay.aspx?DocId=34289"
+                                target="_blank">
+                                <img src="../img/logo-bocongthuong.png" alt="fitfoodvn" border="0"
+                                    width="120px" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright mb-0">© Copyright 2023 Fitfood. All rights reserved.</p>
+        </div>
+    </footer>
+    <div style="display: none" id="ads-popup" data-url="https://fitfood.vn/promotion-utm"></div>
+
+    <!-- modal sign in -->
+    <div class="modal fade" id="sign-in" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form id="sign-in-form" action="https://fitfood.vn/login">
+                        <p class="title">Đăng nhập</p>
+                        <p>Bạn chưa có tài khoản? Vui lòng <a href="javascript:void(0)" class="link"
+                                data-dismiss="modal" data-toggle="modal" data-target="#sign-up">Đăng ký</a></p>
+                        <div class="social_login">
+
+                            <a href="https://fitfood.vn/login/google" class="social_box google"><i
+                                    class="fa-brands fa-google"></i>Đăng nhập với Google</a>
+                        </div>
+                        <div class="or-seperator"><i>Hoặc</i></div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="username" placeholder="Email"
+                                required="required">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="password" placeholder="Mật khẩu"
+                                required="required">
+                        </div>
+                        <a href="javascript:void(0)" class="d-block mb-2" data-dismiss="modal" data-toggle="modal"
+                            data-target="#forgot-password">Quên mật khẩu?</a>
+                        <button type="submit" class="btn btn-primary btn-block">Đăng nhập</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal sign up -->
+    <div class="modal fade" id="sign-up" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form id="sign-up-form" action="https://fitfood.vn/register">
+                        <p class="title">Đăng ký</p>
+                        <p>Bạn đã có tài khoản? Vui lòng <a href="javascript:void(0)" class="link" data-dismiss="modal"
+                                data-toggle="modal" data-target="#sign-in">Đăng nhập</a></p>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="fullname" placeholder="Họ &amp; tên"
+                                data-msg-required="Vui lòng nhập tên">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="username" placeholder="Email"
+                                data-msg-required="Vui lòng nhập email hoặc SĐT">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="password" placeholder="Mật khẩu"
+                                data-msg-required="Nhập mật khẩu">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="password_confirm"
+                                placeholder="Xác nhận mật khẩu" data-msg-required="Xác nhận mật khẩu">
+                        </div>
+                        <div class="form-group img-captcha">
+                            <div id="img-captcha">
+                                <img src="https://fitfood.vn/captcha/captcha.jpg?iPNgbwnG">
+                                <span id="refresh-captcha" data-url="https://fitfood.vn/re-captcha"><img src="../img/refresh.png" alt=""></span>
+                            </div>
+                            <input type="text" class="form-control" name="captcha" id="captcha" placeholder=""
+                                data-msg-required="Captcha is invalid">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Đăng ký</button>
+                        <div class="or-seperator"><i>Hoặc</i></div>
+                        <div class="social_login">
+                            <a href="https://fitfood.vn/login/google" class="social_box google"><i class="fa-brands fa-google"></i> Đăng nhập với Google</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous">
+    </script>
+    <script src="https://fitfood.vn/js/init.js?v=20230620"></script>
+    <script src="https://fitfood.vn/js/underscore-min.js?v=20230620"></script>
+    <script src="https://fitfood.vn/js/slick.min.js?v=20230620"></script>
+    <script src="https://fitfood.vn/js/jquery.bxslider.min.js?v=20230620"></script>
+    <script src="https://fitfood.vn/js/jquery.cookie.js?v=20230620"></script>
+    <script src="https://fitfood.vn/js/plugins/numeral.min.js?v=20230620"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://fitfood.vn/js/plugins/jquery.validation/jquery.validate.min.js?v=20230620"></script>
+    <script src="https://fitfood.vn/js/plugins/jquery.parseParams.js?v=20230620"></script>
+    <script src="https://fitfood.vn/js/plugins/magnific-popup.min.js?v=20230620"></script>
+    <script src="https://fitfood.vn/js/plugins/lightbox/lightbox.js?v=20230620"></script>
+    <script src="https://fitfood.vn/js/plugins/bootbox/bootbox.min.js?v=20230620"></script>
+    <script src="https://fitfood.vn/js/plugins/bootbox/bootbox.locales.js?v=20230620"></script>
+    <script src="https://fitfood.vn/js/plugins.js?v=20230620"></script>
+    <script src="https://fitfood.vn/js/modules/tracking.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>
